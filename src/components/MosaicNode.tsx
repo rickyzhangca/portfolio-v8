@@ -20,9 +20,11 @@ export const MosaicNode = ({ id }: NodeProps) => {
       }}
       className="flex flex-col gap-2.5 rounded-md border border-gray-200 bg-white p-2 pb-2.5"
     >
-      <div className="relative overflow-hidden rounded p-14">
-        <img src={mosaic} className="relative z-10 size-20" />
-        <img src={mosaicBg} className="absolute inset-0" />
+      <div
+        className="relative overflow-hidden rounded p-12"
+        style={{ backgroundImage: `url(${mosaicBg})`, backgroundSize: 'cover' }}
+      >
+        <img src={mosaic} className="relative z-10 size-32" />
       </div>
       <div className="flex flex-col items-center gap-1 pl-0.5">
         <p className="font-medium text-gray-900">UX Designer @ Mosaic</p>

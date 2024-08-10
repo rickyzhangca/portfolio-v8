@@ -25,7 +25,6 @@ import { MintlifyNode } from './components/MintlifyNode';
 import { MosaicNode } from './components/MosaicNode';
 import { RBCNode } from './components/RBCNode';
 import { ResumeNode } from './components/ResumeNode';
-import { TitleNode } from './components/TitleNode';
 import { TwitterNode } from './components/TwitterNode';
 
 const nodeTypes = {
@@ -36,7 +35,6 @@ const nodeTypes = {
   MosaicNode: MosaicNode,
   MintlifyNode: MintlifyNode,
   TwitterNode: TwitterNode,
-  TitleNode: TitleNode,
   ResumeNode: ResumeNode,
 };
 
@@ -77,7 +75,7 @@ const Flow = () => {
       {
         id: 'MemojiNode',
         type: 'MemojiNode',
-        position: screenToFlowPosition({ x: 30, y: 30 }),
+        position: screenToFlowPosition({ x: 24, y: 24 }),
         data: { value: 123 },
       },
       {
@@ -113,15 +111,9 @@ const Flow = () => {
       {
         id: 'TwitterNode',
         type: 'TwitterNode',
-        position: { x: 0, y: 0 },
-        data: { value: 123 },
-      },
-      {
-        id: 'TitleNode',
-        type: 'TitleNode',
         position: screenToFlowPosition({
-          x: windowSize.width / 2,
-          y: windowSize.height / 2,
+          x: 0,
+          y: 0,
         }),
         data: { value: 123 },
       },
@@ -148,6 +140,7 @@ const Flow = () => {
         onNodeDragStart={(_, node) => setCurrentDraggingNode(node.id)}
         onNodeDragStop={() => setCurrentDraggingNode('')}
         zoomOnDoubleClick={false}
+        panOnScroll
       >
         <Background
           color="#E6E6E6"
