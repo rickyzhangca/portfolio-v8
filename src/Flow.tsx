@@ -1,3 +1,4 @@
+import * as Portal from '@radix-ui/react-portal';
 import {
   addEdge,
   applyNodeChanges,
@@ -30,6 +31,7 @@ import { NoteNode } from './components/NoteNode';
 import { RBCNode } from './components/RBCNode';
 import { ResumeNode } from './components/ResumeNode';
 import { TwitterNode } from './components/TwitterNode';
+import { Contents } from './pages';
 
 const nodeTypes = {
   MemojiNode: MemojiNode,
@@ -48,6 +50,8 @@ const nodeTypes = {
 const defaultViewport: Viewport = { x: 0, y: 0, zoom: 0.9 };
 
 export const Flow = () => {
+  const [displayContent, setDisplayContent] = useAtom(atoms.displayContent);
+
   const [nodes, setNodes] = useState<Node[]>([]);
   const [edges, setEdges] = useState([]);
   const { screenToFlowPosition, setViewport } = useReactFlow();
@@ -139,8 +143,8 @@ export const Flow = () => {
         id: 'LinkedInNode',
         type: 'LinkedInNode',
         position: screenToFlowPosition({
-          x: windowSize.width - 320,
-          y: 60,
+          x: windowSize.width - 300,
+          y: 50,
         }),
         data: { value: 123 },
       },
@@ -218,6 +222,23 @@ export const Flow = () => {
           >
             <UndoIcon />
           </motion.button>
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {displayContent && (
+          <Portal.Root onClick={() => setDisplayContent(null)}>
+            {Contents[displayContent]}
+            <motion.div
+              className="fixed inset-0 z-10 bg-white/50 backdrop-blur"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.2,
+                ease: 'easeInOut',
+              }}
+            />
+          </Portal.Root>
         )}
       </AnimatePresence>
     </div>

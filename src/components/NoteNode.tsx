@@ -1,19 +1,14 @@
-import * as Portal from '@radix-ui/react-portal';
 import { NodeProps } from '@xyflow/react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
-import { useState } from 'react';
-import { useHotkeys } from 'react-hotkeys-hook';
 import { atoms } from '../atoms';
-import { Why } from '../pages/why/why';
 import pen from './pen.webp';
 
 export const NoteNode = ({ id }: NodeProps) => {
   const [currentDraggingNode] = useAtom(atoms.currentDraggingNode);
   const isDragging = currentDraggingNode === id;
 
-  const [isDisplayContent, setIsDisplayContent] = useState(false);
-  useHotkeys('esc', () => setIsDisplayContent(false));
+  const [, setDisplayContent] = useAtom(atoms.displayContent);
 
   return (
     <motion.div
@@ -38,27 +33,10 @@ export const NoteNode = ({ id }: NodeProps) => {
         </div>
         <button
           className="w-fit text-sm text-gray-800 underline outline-none"
-          onClick={() => setIsDisplayContent(true)}
+          onClick={() => setDisplayContent('why')}
         >
           Why I design & code →
         </button>
-        <AnimatePresence>
-          {isDisplayContent && (
-            <Portal.Root onClick={() => setIsDisplayContent(false)}>
-              <Why />
-              <motion.div
-                className="fixed inset-0 z-10 bg-white/50 backdrop-blur"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{
-                  duration: 0.2,
-                  ease: 'easeInOut',
-                }}
-              />
-            </Portal.Root>
-          )}
-        </AnimatePresence>
       </div>
       <img
         src={pen}
