@@ -27,8 +27,8 @@ const FolderBottom = () => (
         y2="334"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#89DAFF" />
-        <stop offset="1" stop-color="#A7E3FF" />
+        <stop stopColor="#89DAFF" />
+        <stop offset="1" stopColor="#A7E3FF" />
       </linearGradient>
     </defs>
   </svg>
@@ -52,8 +52,8 @@ const FolderTop = ({ isHovering }: { isHovering: boolean }) => (
       fill="#76D1FB"
     />
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M24 0C10.7452 0 0 10.7452 0 24V273H477V24C477 10.7452 466.255 0 453 0H24Z"
       fill="url(#paint0_linear_24_9)"
     />
@@ -75,10 +75,10 @@ const FolderTop = ({ isHovering }: { isHovering: boolean }) => (
         y2="313"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#6DCAF5" />
-        <stop offset="0.175" stop-color="#76D1FB" />
-        <stop offset="0.825" stop-color="#76D1FB" />
-        <stop offset="1" stop-color="#6FC4EC" />
+        <stop stopColor="#6DCAF5" />
+        <stop offset="0.175" stopColor="#76D1FB" />
+        <stop offset="0.825" stopColor="#76D1FB" />
+        <stop offset="1" stopColor="#6FC4EC" />
       </linearGradient>
       <linearGradient
         id="paint1_linear_24_9"
@@ -88,9 +88,9 @@ const FolderTop = ({ isHovering }: { isHovering: boolean }) => (
         y2="313"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" stop-opacity="0.2" />
-        <stop offset="0.5" stop-color="white" stop-opacity="0" />
-        <stop offset="1" stop-opacity="0.2" />
+        <stop stopColor="white" stopOpacity="0.2" />
+        <stop offset="0.5" stopColor="white" stopOpacity="0" />
+        <stop offset="1" stopOpacity="0.2" />
       </linearGradient>
       <linearGradient
         id="paint2_linear_24_9"
@@ -100,9 +100,9 @@ const FolderTop = ({ isHovering }: { isHovering: boolean }) => (
         y2="301"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" stop-opacity="0.2" />
-        <stop offset="0.5" stop-color="white" stop-opacity="0" />
-        <stop offset="1" stop-opacity="0.2" />
+        <stop stopColor="white" stopOpacity="0.2" />
+        <stop offset="0.5" stopColor="white" stopOpacity="0" />
+        <stop offset="1" stopOpacity="0.2" />
       </linearGradient>
       <linearGradient
         id="paint3_linear_24_9"
@@ -112,9 +112,9 @@ const FolderTop = ({ isHovering }: { isHovering: boolean }) => (
         y2="289"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="white" stop-opacity="0.2" />
-        <stop offset="0.5" stop-color="white" stop-opacity="0" />
-        <stop offset="1" stop-opacity="0.2" />
+        <stop stopColor="white" stopOpacity="0.2" />
+        <stop offset="0.5" stopColor="white" stopOpacity="0" />
+        <stop offset="1" stopOpacity="0.2" />
       </linearGradient>
     </defs>
   </motion.svg>
@@ -145,9 +145,11 @@ export const ResumeNode = ({ id }: NodeProps) => {
       <div className="absolute bottom-0 left-1/2 z-10 h-72 w-full -translate-x-1/2 overflow-hidden">
         <motion.img
           animate={{
-            translateX: '-50%',
             translateY: isHovering ? '-50px' : '0px',
             filter: 'drop-shadow(0px 0px 4px rgb(0 0 0 / 0.05))',
+          }}
+          initial={{
+            translateX: '-50%',
           }}
           className="absolute bottom-0 left-1/2 z-10 h-auto w-[calc(100%-24px)] cursor-pointer"
           src={resume}
@@ -165,9 +167,9 @@ export const ResumeNode = ({ id }: NodeProps) => {
               animate={{ opacity: 1, x: 10, y: 20 }}
               exit={{ opacity: 0, x: 10, y: 80 }}
               transition={{ delay: 0.05 }}
-              className="font-fredericka text-lg text-gray-400"
+              className="font-fredericka text-lg text-gray-500"
             >
-              Get resume ;-)
+              View my resume ;-)
             </motion.div>
           )}
         </AnimatePresence>

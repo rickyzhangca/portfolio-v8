@@ -1,13 +1,18 @@
+import { ReactFlowProvider } from '@xyflow/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { App } from './App.tsx';
+import { Flow } from './Flow.tsx';
 import './index.css';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: (
+      <ReactFlowProvider>
+        <Flow />
+      </ReactFlowProvider>
+    ),
   },
 ]);
 

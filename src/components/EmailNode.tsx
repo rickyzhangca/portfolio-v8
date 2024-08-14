@@ -1,13 +1,25 @@
-import { CopyIcon, MailIcon } from '@primer/octicons-react';
+import { CheckIcon, CopyIcon, MailIcon } from '@primer/octicons-react';
 import { NodeProps } from '@xyflow/react';
 import copy from 'copy-to-clipboard';
 import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
+import { useEffect, useState } from 'react';
 import { atoms } from '../atoms';
 
 export const EmailNode = ({ id }: NodeProps) => {
   const [currentDraggingNode] = useAtom(atoms.currentDraggingNode);
   const isDragging = currentDraggingNode === id;
+
+  const [isCopied, setIsCopied] = useState(false);
+
+  useEffect(() => {
+    if (isCopied) {
+      const timer = setTimeout(() => {
+        setIsCopied(false);
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [isCopied]);
 
   return (
     <motion.div
@@ -34,10 +46,14 @@ export const EmailNode = ({ id }: NodeProps) => {
         </button>
         <button
           onPointerDownCapture={(e) => e.stopPropagation()}
-          onClick={() => copy('hi@rickyzhang.me')}
+          onClick={() => {
+            copy('hi@rickyzhang.me');
+            setIsCopied(true);
+          }}
+          disabled={isCopied}
           className="flex items-center justify-center rounded-full bg-gray-100 p-3 text-gray-500 transition hover:bg-gray-200 hover:text-gray-600"
         >
-          <CopyIcon />
+          {isCopied ? <CheckIcon /> : <CopyIcon />}
         </button>
       </div>
     </motion.div>
