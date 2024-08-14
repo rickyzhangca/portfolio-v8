@@ -15,19 +15,24 @@ export const Why = () => {
           started as a UI/UX designer at Mosaic, a 3D printing startup, where I
           tackled the challenges of creating user interfaces for various IoT
           devices. This experience ignited my curiosity about the technical
-          aspects, leading me to become a UX engineer at RBC Investor Services
-          AI Operations team, and eventually, a design engineer at Mintlify.
+          aspects, leading me to become a UX engineer at RBC AIOps team, and
+          eventually, a design engineer at Mintlify.
         </p>
       </section>
-
       <section>
-        <h2>The Magic of Blending Design and Tech</h2>
+        <h2>The Magic of Blending Design and Engineering</h2>
         <p>
-          As a design engineer, I wear two hats – designer and coder. It's like
-          being a chocolate and peanut butter enthusiast who decided to invent
-          Reese's. We take the best of both worlds and create something magical.
+          As a design engineer, I wear two hats – designer and coder. The seed
+          was planted when I read about{' '}
+          <a
+            href="https://medium.com/google-design/google-maps-cb0326d165f5"
+            target="_blank"
+          >
+            Prototyping a Smoother Map
+          </a>{' '}
+          when I was in school. I was fascinated by the idea of being at the
+          intersection of design and engineering.
         </p>
-
         <h3>What Drives Me</h3>
         <ol>
           <li>
@@ -48,16 +53,13 @@ export const Why = () => {
           </li>
         </ol>
       </section>
-
       <section>
         <h2>How This Approach Helps Teams</h2>
-
         <h3>Bridging the Gap</h3>
         <p>
           As a design engineer, I act as a translator, helping both designers
           and engineers understand each other better.
         </p>
-
         <h3>Faster, Better, Stronger</h3>
         <ol>
           <li>
@@ -74,7 +76,6 @@ export const Why = () => {
           </li>
         </ol>
       </section>
-
       <section>
         <h2>Collaborative Workflow and Responsibilities</h2>
         <p>
@@ -114,7 +115,6 @@ export const Why = () => {
           integrity while proactively addressing technical challenges.
         </p>
       </section>
-
       <section>
         <h2>Sharing Knowledge and Giving Back</h2>
         <p>I'm passionate about helping others in the tech community. I've:</p>
@@ -130,7 +130,6 @@ export const Why = () => {
           <li>Published design resources accessed by 8,600 users</li>
         </ul>
       </section>
-
       <section>
         <h2>Looking to the Future</h2>
         <p>
@@ -141,7 +140,6 @@ export const Why = () => {
           traditional silos to create products that truly make a difference.
         </p>
       </section>
-
       <section>
         <h2>Learn more</h2>
         <p>
