@@ -2,7 +2,7 @@ import { ArrowUpRightIcon } from '@primer/octicons-react';
 import { NodeProps } from '@xyflow/react';
 import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
-import { atoms } from '../atoms';
+import { atoms } from '../../atoms';
 
 export const TwitterNode = ({ id }: NodeProps) => {
   const [currentDraggingNode] = useAtom(atoms.currentDraggingNode);

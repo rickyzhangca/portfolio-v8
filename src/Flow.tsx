@@ -20,17 +20,17 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useAtom } from 'jotai';
 import { useWindowSize } from 'usehooks-ts';
 import { atoms } from './atoms';
-import { EmailNode } from './components/EmailNode';
-import { FunNode } from './components/FunNode';
-import { LinkedInNode } from './components/LinkedInNode';
-import { MemojiNode } from './components/MemojiNode';
-import { MintlifyNode } from './components/MintlifyNode';
-import { MoreNode } from './components/MoreNode';
-import { MosaicNode } from './components/MosaicNode';
-import { NoteNode } from './components/NoteNode';
-import { RBCNode } from './components/RBCNode';
-import { ResumeNode } from './components/ResumeNode';
-import { TwitterNode } from './components/TwitterNode';
+import { EmailNode } from './components/nodes/EmailNode';
+import { FunNode } from './components/nodes/FunNode';
+import { LinkedInNode } from './components/nodes/LinkedInNode';
+import { MemojiNode } from './components/nodes/MemojiNode';
+import { MintlifyNode } from './components/nodes/MintlifyNode';
+import { MoreNode } from './components/nodes/MoreNode';
+import { MosaicNode } from './components/nodes/MosaicNode';
+import { NoteNode } from './components/nodes/NoteNode';
+import { RBCNode } from './components/nodes/RBCNode';
+import { ResumeNode } from './components/nodes/ResumeNode';
+import { TwitterNode } from './components/nodes/TwitterNode';
 import { Contents } from './pages';
 
 const nodeTypes = {

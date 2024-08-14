@@ -1,7 +1,7 @@
 import { NodeProps } from '@xyflow/react';
 import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
-import { atoms } from '../atoms';
+import { atoms } from '../../atoms';
 import pen from './pen.webp';
 
 export const NoteNode = ({ id }: NodeProps) => {

@@ -4,7 +4,7 @@ import copy from 'copy-to-clipboard';
 import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
 import { useEffect, useState } from 'react';
-import { atoms } from '../atoms';
+import { atoms } from '../../atoms';
 
 export const EmailNode = ({ id }: NodeProps) => {
   const [currentDraggingNode] = useAtom(atoms.currentDraggingNode);

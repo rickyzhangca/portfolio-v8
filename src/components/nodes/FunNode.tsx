@@ -1,7 +1,7 @@
 import { NodeProps } from '@xyflow/react';
 import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
-import { atoms } from '../atoms';
+import { atoms } from '../../atoms';
 
 export const FunNode = ({ id }: NodeProps) => {
   const [currentDraggingNode] = useAtom(atoms.currentDraggingNode);

@@ -2,7 +2,7 @@ import { NodeProps } from '@xyflow/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useAtom } from 'jotai';
 import { useState } from 'react';
-import { atoms } from '../atoms';
+import { atoms } from '../../atoms';
 import resume from './resume.webp';
 
 const FolderBottom = () => (
