@@ -1,6 +1,6 @@
 import { CodeBlock, dracula } from 'react-code-blocks';
 import ReactPlayer from 'react-player';
-import { TwitterTweetEmbed } from 'react-twitter-embed';
+import { Tweet } from 'react-tweet';
 import { Image } from '../../components/Image';
 import { PageLayout } from '../../components/PageLayout';
 import { PluginCard } from '../../components/PluginCard';
@@ -163,10 +163,10 @@ const AppleSummarySlides = () => (
     />
     <Image src={summarySlides} className="mt-4" />
     <p>And the community has loved it!</p>
-    <div className="not-prose my-8 flex justify-center gap-3 rounded-xl border border-gray-200 bg-gray-100">
-      <TwitterTweetEmbed tweetId={'1606746044867530753'} />
-      <TwitterTweetEmbed tweetId={'1607124694288986112'} />
-      <TwitterTweetEmbed tweetId={'1602588188467396609'} />
+    <div className="not-prose my-8 flex justify-center gap-3 rounded-xl border border-gray-200 bg-gray-100 px-4">
+      <Tweet id={'1606746044867530753'} />
+      <Tweet id={'1607124694288986112'} />
+      <Tweet id={'1602588188467396609'} />
     </div>
   </>
 );
