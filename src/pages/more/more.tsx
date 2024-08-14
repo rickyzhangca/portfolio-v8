@@ -31,10 +31,17 @@ const FigKiwiToolbox = () => (
       paste component between tools.
     </p>
     <p>
-      And fig-kiwi-toolbox was born. It reads and decodes the Figma data you
-      have in the clipboard into JSON. The toolbox is greatly inspired by Sketch
-      team's Figma file importer and have inspired many other developers on
-      Reddit.
+      And{' '}
+      <a
+        href="https://github.com/interlace-app/fig-kiwi-toolbox"
+        target="_blank"
+        rel="noreferrer"
+      >
+        fig-kiwi-toolbox
+      </a>{' '}
+      was born. It reads and decodes the Figma data you have in the clipboard
+      into JSON. The toolbox is greatly inspired by Sketch team's Figma file
+      importer and have inspired many other developers on Reddit.
     </p>
     <Image src={figKiwi} className="h-[560px] bg-gray-900 p-6" />
   </>
