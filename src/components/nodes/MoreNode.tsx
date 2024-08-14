@@ -31,31 +31,31 @@ export const MoreNode = ({ id }: NodeProps) => {
       </button>
       <img
         src={logo0}
-        className="absolute size-16 -rotate-6 rounded-[14px] shadow-sm transition group-hover:-translate-x-3 group-hover:-translate-y-4 group-hover:shadow"
+        className="absolute size-20 -rotate-6 rounded-[14px] shadow-sm transition group-hover:-translate-x-2 group-hover:-translate-y-4 group-hover:shadow"
       />
       <img
         src={logo1}
-        className="absolute size-16 translate-x-5 translate-y-12 rounded-[14px] shadow-sm transition group-hover:-translate-x-6 group-hover:translate-y-10 group-hover:shadow"
+        className="absolute size-20 -translate-x-2 translate-y-12 rounded-[14px] shadow-sm transition group-hover:-translate-x-10 group-hover:translate-y-10 group-hover:shadow"
       />
       <img
         src={logo2}
-        className="absolute size-16 translate-x-16 translate-y-28 rotate-6 rounded-[14px] shadow-sm transition group-hover:translate-x-14 group-hover:translate-y-32 group-hover:shadow"
+        className="absolute size-20 translate-x-16 translate-y-32 rotate-6 rounded-[14px] shadow-sm transition group-hover:translate-x-14 group-hover:translate-y-36 group-hover:shadow"
       />
       <img
         src={logo3}
-        className="absolute size-16 translate-x-4 translate-y-24 -rotate-12 rounded-[14px] shadow-sm transition group-hover:-translate-x-2 group-hover:translate-y-28 group-hover:shadow"
+        className="absolute size-20 translate-x-4 translate-y-24 -rotate-12 rounded-[14px] shadow-sm transition group-hover:-translate-x-12 group-hover:translate-y-28 group-hover:shadow"
       />
       <img
         src={logo4}
-        className="absolute size-16 translate-x-20 translate-y-4 rotate-6 rounded-[14px] shadow-sm transition group-hover:translate-x-24 group-hover:translate-y-2 group-hover:shadow"
+        className="absolute size-20 translate-x-20 translate-y-4 rotate-6 rounded-[14px] shadow-sm transition group-hover:-translate-y-2 group-hover:translate-x-28 group-hover:shadow"
       />
       <img
         src={logo5}
-        className="absolute size-16 translate-x-28 translate-y-12 rounded-[14px] shadow-sm transition group-hover:translate-x-40 group-hover:translate-y-16 group-hover:shadow"
+        className="absolute size-20 translate-x-28 translate-y-12 rounded-[14px] shadow-sm transition group-hover:translate-x-44 group-hover:translate-y-16 group-hover:shadow"
       />
       <img
         src={logo6}
-        className="absolute size-16 translate-x-28 translate-y-24 rotate-12 rounded-[14px] shadow-sm transition group-hover:translate-x-40 group-hover:translate-y-28 group-hover:shadow"
+        className="absolute size-20 translate-x-32 translate-y-24 rotate-12 rounded-[14px] shadow-sm transition group-hover:translate-x-40 group-hover:translate-y-28 group-hover:shadow"
       />
     </motion.div>
   );

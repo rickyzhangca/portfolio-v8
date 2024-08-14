@@ -153,7 +153,7 @@ export const Flow = () => {
         type: 'MoreNode',
         position: screenToFlowPosition({
           x: 1200,
-          y: 240,
+          y: 260,
         }),
         data: { value: 123 },
       },
@@ -161,8 +161,8 @@ export const Flow = () => {
         id: 'FunNode',
         type: 'FunNode',
         position: screenToFlowPosition({
-          x: 1200,
-          y: 480,
+          x: 1280,
+          y: 520,
         }),
         data: { value: 123 },
       },
