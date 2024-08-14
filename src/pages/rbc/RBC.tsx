@@ -6,10 +6,6 @@ export const RBC = () => {
       <h1>RBC</h1>
       Due to NDA I am not able to share the projects I worked on at RBC. Please
       reach out if you would like to learn more about my work!
-      <p>
-        During my time at RBC Investor Services AI Operations team, I made
-        significant contributions to the company's AIOps initiatives:
-      </p>
       <section>
         <h2>Leadership in AIOps Product Development</h2>
         <ul>
@@ -46,14 +42,6 @@ export const RBC = () => {
         <ul>
           <li>
             Designed and built a tool to help data engineers manage PySpark jobs
-          </li>
-          <li>
-            Conducted user research to understand data engineers' workflows and
-            pain points
-          </li>
-          <li>
-            Created intuitive interfaces for complex operations, improving team
-            productivity
           </li>
         </ul>
       </section>
