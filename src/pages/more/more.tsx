@@ -67,6 +67,7 @@ const MirrorActualSize = () => (
       title="Mirror Actual Size"
       description="A Figma plugin that ensures content is displayed at its actual size when mirrored to a device."
       count="3.2k"
+      href="https://www.figma.com/community/plugin/989887108667938748/mirror-actual-size"
     />
     <p>
       The Mirror Actual Size plugin has become an essential tool for us at
@@ -110,6 +111,7 @@ const Slides = () => (
       description="Add controls (interactive, of course) to the frames so you can
                 use them as slides."
       count="11.3k"
+      href="https://www.figma.com/community/plugin/1050766825375940133/slides"
     />
     <p>
       This saves time and ensures that the interactions are always up-to-date,
@@ -150,6 +152,7 @@ const AppleSummarySlides = () => (
                 their events."
       count="8.4k"
       label="View in Community"
+      href="https://www.figma.com/community/file/1150817983915754582/all-apple-event-summary-slides-2019-2024"
     />
     <Image src={summarySlides} className="mt-4" />
     <p>And the community has loved it!</p>
@@ -198,7 +201,7 @@ const OcticonsExtended = () => (
     <div className="not-prose my-8 grid grid-flow-row gap-2 md:grid-flow-col md:grid-cols-4 md:grid-rows-4">
       <Image className="col-span-4 row-span-2" src={octiconsWeb} />
       <Image
-        href="https://www.npmjs.com/package/octicons-extended-react"
+        href="https://www.figma.com/community/file/1150065417044869754/octicons-extended"
         className="col-span-3 row-span-2 p-4"
         src={octiconsFigma}
       />

@@ -16,7 +16,7 @@ export const Mosaic = () => {
         <h3>Architecting and Building a Multi-device Design System</h3>
         <a
           className="not-prose relative flex h-[480px] items-center justify-center rounded-xl bg-cover transition hover:z-10 hover:scale-105"
-          href="https://portfolio-smoky-eight-97.vercel.app/designSystem"
+          href="https://bd1e0efc.portfolio-ck9.pages.dev/designSystem"
           target="_blank"
           style={{ backgroundImage: `url(${designSystemBackground})` }}
         >
@@ -25,7 +25,7 @@ export const Mosaic = () => {
         <h3>Designing Global Search Experience</h3>
         <a
           className="not-prose relative flex h-[480px] items-center justify-center rounded-xl bg-cover transition hover:z-10 hover:scale-105"
-          href="https://portfolio-smoky-eight-97.vercel.app/globalSearch"
+          href="https://bd1e0efc.portfolio-ck9.pages.dev/globalSearch"
           target="_blank"
           style={{ backgroundImage: `url(${searchBackground})` }}
         >
@@ -34,7 +34,7 @@ export const Mosaic = () => {
         <h3>Refreshing Mosaic's Icon System</h3>
         <a
           className="not-prose relative flex h-[480px] items-center justify-center rounded-xl bg-cover transition hover:z-10 hover:scale-105"
-          href="https://portfolio-smoky-eight-97.vercel.app/mosaicIcons"
+          href="https://bd1e0efc.portfolio-ck9.pages.dev/mosaicIcons"
           target="_blank"
           style={{ backgroundImage: `url(${iconsBackground})` }}
         >
