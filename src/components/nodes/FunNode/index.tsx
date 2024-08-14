@@ -15,7 +15,6 @@ import tailwind from './tailwind.webp';
 import turtles from './turtles.webp';
 
 export const FunNode = ({ id }: NodeProps) => {
-  const [, setDisplayContent] = useAtom(atoms.displayContent);
   const [currentDraggingNode] = useAtom(atoms.currentDraggingNode);
   const isDragging = currentDraggingNode === id;
 
