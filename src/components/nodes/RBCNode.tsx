@@ -29,8 +29,6 @@ export const RBCNode = ({ id }: NodeProps) => {
           <p className="font-medium text-gray-900">UX Engineer @ RBC</p>
           <p className="text-sm text-gray-400">2023 - 24</p>
         </div>
-        <div className="absolute -z-10 h-[298px] w-[238px] translate-x-0.5 translate-y-0.5 rounded-md border border-gray-200 bg-white shadow transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:-rotate-[9deg]" />
-        <div className="absolute -z-10 h-[298px] w-[238px] rounded-md border border-gray-200 bg-white shadow-sm transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:-rotate-6" />
         <div className="absolute -z-10 h-[298px] w-[238px] -translate-x-0.5 -translate-y-0.5 rounded-md border border-gray-200 bg-white shadow transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:-rotate-3" />
       </div>
     </motion.div>
