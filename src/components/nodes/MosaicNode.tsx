@@ -21,9 +21,9 @@ export const MosaicNode = ({ id }: NodeProps) => {
       }}
       className="group"
     >
-      <div className="flex flex-col gap-2.5 rounded-md border border-gray-200 bg-gray-900 p-2 pb-2.5 shadow">
+      <div className="flex flex-col gap-2.5 rounded-md border border-gray-200 bg-white p-2 pb-2.5 shadow">
         <div
-          className="relative overflow-hidden rounded p-12"
+          className="relative overflow-hidden rounded bg-gray-900 p-12"
           style={{
             backgroundImage: `url(${mosaicBg})`,
             backgroundSize: 'cover',
