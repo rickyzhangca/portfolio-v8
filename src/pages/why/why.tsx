@@ -131,16 +131,6 @@ export const Why = () => {
         </ul>
       </section>
       <section>
-        <h2>Looking to the Future</h2>
-        <p>
-          My goal is to become a product owner and experience-oriented team
-          lead. I want to use my unique perspective to help companies create
-          more user-centric products. I'm excited about fostering increased
-          collaboration between designers and engineers, breaking down
-          traditional silos to create products that truly make a difference.
-        </p>
-      </section>
-      <section>
         <h2>Learn more</h2>
         <p>
           Check out the projects I've contributed to in the rest of my
