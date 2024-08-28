@@ -1,1 +1,1 @@
-`yarn dev` and see magic
+`pnpm dev` and see magic
