@@ -32,7 +32,7 @@ export const NoteNode = ({ id }: NodeProps) => {
           </p>
         </div>
         <button
-          className="w-fit text-sm text-gray-800 underline outline-none"
+          className="w-fit text-sm text-gray-800 underline outline-hidden"
           onClick={() => setDisplayContent('why')}
         >
           Why I design & code →
