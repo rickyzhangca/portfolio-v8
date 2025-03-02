@@ -20,18 +20,20 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useAtom } from 'jotai';
 import { useWindowSize } from 'usehooks-ts';
 import { atoms } from './atoms';
-import { EmailNode } from './components/nodes/EmailNode';
-import { FunNode } from './components/nodes/FunNode';
-import { LinkedInNode } from './components/nodes/LinkedInNode';
-import { MemojiNode } from './components/nodes/MemojiNode';
-import { MintlifyNode } from './components/nodes/MintlifyNode';
-import { MoreNode } from './components/nodes/MoreNode';
-import { MosaicNode } from './components/nodes/MosaicNode';
-import { NoteNode } from './components/nodes/NoteNode';
-import { RBCNode } from './components/nodes/RBCNode';
-import { ResumeNode } from './components/nodes/ResumeNode';
-import { TwitterNode } from './components/nodes/TwitterNode';
-import { WSNode } from './components/nodes/WSNode';
+import {
+  EmailNode,
+  FunNode,
+  LinkedInNode,
+  MemojiNode,
+  MintlifyNode,
+  MoreNode,
+  MosaicNode,
+  NoteNode,
+  RBCNode,
+  ResumeNode,
+  TwitterNode,
+  WSNode,
+} from './components';
 import { Contents } from './pages';
 
 const nodeTypes = {
@@ -109,8 +111,8 @@ export const Flow = () => {
         id: 'MosaicNode',
         type: 'MosaicNode',
         position: screenToFlowPosition({
-          x: 940,
-          y: 400,
+          x: 460 + 220 * 3,
+          y: 140 + 80 * 3,
         }),
         data: { value: 123 },
       },
@@ -118,8 +120,8 @@ export const Flow = () => {
         id: 'RBCNode',
         type: 'RBCNode',
         position: screenToFlowPosition({
-          x: 770,
-          y: 300,
+          x: 460 + 220 * 2,
+          y: 140 + 80 * 2,
         }),
         data: { value: 123 },
       },
@@ -127,8 +129,8 @@ export const Flow = () => {
         id: 'MintlifyNode',
         type: 'MintlifyNode',
         position: screenToFlowPosition({
-          x: 640,
-          y: 230,
+          x: 460 + 220,
+          y: 140 + 80,
         }),
         data: { value: 123 },
       },
@@ -136,8 +138,8 @@ export const Flow = () => {
         id: 'WSNode',
         type: 'WSNode',
         position: screenToFlowPosition({
-          x: 480,
-          y: 130,
+          x: 460,
+          y: 140,
         }),
         data: { value: 123 },
       },
@@ -163,8 +165,8 @@ export const Flow = () => {
         id: 'MoreNode',
         type: 'MoreNode',
         position: screenToFlowPosition({
-          x: 1280,
-          y: 240,
+          x: 1500,
+          y: 220,
         }),
         data: { value: 123 },
       },
@@ -172,7 +174,7 @@ export const Flow = () => {
         id: 'FunNode',
         type: 'FunNode',
         position: screenToFlowPosition({
-          x: 1360,
+          x: 1460,
           y: 520,
         }),
         data: { value: 123 },

@@ -5,6 +5,7 @@ import { RBC } from './rbc/RBC';
 import { Why } from './why/why';
 
 export const Contents = {
+  wealthsimple: <Mintlify />,
   mintlify: <Mintlify />,
   rbc: <RBC />,
   mosaic: <Mosaic />,

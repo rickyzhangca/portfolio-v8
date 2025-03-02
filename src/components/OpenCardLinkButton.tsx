@@ -19,7 +19,7 @@ export const OpenCardLinkButton = ({
     <>
       <button
         className={tw(
-          'pointer-events-none absolute top-3 right-3 flex size-10 scale-[80%] items-center justify-center rounded-full bg-white text-gray-900 opacity-0 transition group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 hover:cursor-pointer hover:bg-gray-100',
+          'pointer-events-none absolute top-5 right-5 flex size-10 scale-[80%] items-center justify-center rounded-full bg-white text-gray-900 opacity-0 transition group-hover:pointer-events-auto group-hover:scale-100 group-hover:opacity-100 hover:cursor-pointer hover:bg-gray-100',
           className,
         )}
         onClick={() => setDisplayContent(content)}

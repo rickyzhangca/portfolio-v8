@@ -1,9 +1,9 @@
 import { NodeProps } from '@xyflow/react';
 import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
-import { atoms } from '../../../atoms';
+import { atoms } from '../../atoms';
 
-import { Tooltip, TooltipContent, TooltipTrigger } from '../../Tooltip';
+import { Tooltip, TooltipContent, TooltipTrigger } from '../Tooltip';
 import anime from './anime.webp';
 import cat from './cat.webp';
 import cs2 from './cs2.webp';
@@ -31,7 +31,7 @@ export const FunNode = ({ id }: NodeProps) => {
     >
       <img src={macbook} className="w-80" />
       <Tooltip>
-        <TooltipTrigger className="absolute right-16 top-12 w-24 rotate-6">
+        <TooltipTrigger className="absolute top-12 right-16 w-24 rotate-6">
           <img src={shoe} />
         </TooltipTrigger>
         <TooltipContent sideOffset={2}>
@@ -47,7 +47,7 @@ export const FunNode = ({ id }: NodeProps) => {
         </TooltipContent>
       </Tooltip>
       <Tooltip>
-        <TooltipTrigger className="absolute bottom-6 right-16 w-32 rotate-6">
+        <TooltipTrigger className="absolute right-16 bottom-6 w-32 rotate-6">
           <img src={cat} />
         </TooltipTrigger>
         <TooltipContent sideOffset={2}>
@@ -55,7 +55,7 @@ export const FunNode = ({ id }: NodeProps) => {
         </TooltipContent>
       </Tooltip>
       <Tooltip>
-        <TooltipTrigger className="absolute right-4 top-4 w-10">
+        <TooltipTrigger className="absolute top-4 right-4 w-10">
           <img src={anime} />
         </TooltipTrigger>
         <TooltipContent sideOffset={2}>
@@ -71,7 +71,7 @@ export const FunNode = ({ id }: NodeProps) => {
         </TooltipContent>
       </Tooltip>
       <Tooltip>
-        <TooltipTrigger className="absolute left-4 top-4 w-14 -rotate-6">
+        <TooltipTrigger className="absolute top-4 left-4 w-14 -rotate-6">
           <img src={figma} />
         </TooltipTrigger>
         <TooltipContent sideOffset={2}>
@@ -79,7 +79,7 @@ export const FunNode = ({ id }: NodeProps) => {
         </TooltipContent>
       </Tooltip>
       <Tooltip>
-        <TooltipTrigger className="absolute left-16 top-12 w-16 rotate-6">
+        <TooltipTrigger className="absolute top-12 left-16 w-16 rotate-6">
           <img src={tailwind} />
         </TooltipTrigger>
         <TooltipContent sideOffset={2}>
@@ -87,7 +87,7 @@ export const FunNode = ({ id }: NodeProps) => {
         </TooltipContent>
       </Tooltip>
       <Tooltip>
-        <TooltipTrigger className="absolute bottom-6 right-4 w-20 rotate-6">
+        <TooltipTrigger className="absolute right-4 bottom-6 w-20 rotate-6">
           <img src={turtles} />
         </TooltipTrigger>
         <TooltipContent sideOffset={2}>
