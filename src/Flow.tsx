@@ -31,6 +31,7 @@ import { NoteNode } from './components/nodes/NoteNode';
 import { RBCNode } from './components/nodes/RBCNode';
 import { ResumeNode } from './components/nodes/ResumeNode';
 import { TwitterNode } from './components/nodes/TwitterNode';
+import { WSNode } from './components/nodes/WSNode';
 import { Contents } from './pages';
 
 const nodeTypes = {
@@ -40,6 +41,7 @@ const nodeTypes = {
   RBCNode: RBCNode,
   MosaicNode: MosaicNode,
   MintlifyNode: MintlifyNode,
+  WSNode: WSNode,
   TwitterNode: TwitterNode,
   ResumeNode: ResumeNode,
   NoteNode: NoteNode,
@@ -89,8 +91,8 @@ export const Flow = () => {
         id: 'NoteNode',
         type: 'NoteNode',
         position: screenToFlowPosition({
-          x: 120,
-          y: 310,
+          x: 100,
+          y: 300,
         }),
         data: { value: 123 },
       },
@@ -99,16 +101,16 @@ export const Flow = () => {
         type: 'ResumeNode',
         position: screenToFlowPosition({
           x: 450,
-          y: 580,
+          y: 620,
         }),
         data: { value: 123 },
       },
       {
-        id: 'MintlifyNode',
-        type: 'MintlifyNode',
+        id: 'MosaicNode',
+        type: 'MosaicNode',
         position: screenToFlowPosition({
-          x: 515,
-          y: 160,
+          x: 940,
+          y: 400,
         }),
         data: { value: 123 },
       },
@@ -122,11 +124,20 @@ export const Flow = () => {
         data: { value: 123 },
       },
       {
-        id: 'MosaicNode',
-        type: 'MosaicNode',
+        id: 'MintlifyNode',
+        type: 'MintlifyNode',
         position: screenToFlowPosition({
-          x: 900,
-          y: 590,
+          x: 640,
+          y: 230,
+        }),
+        data: { value: 123 },
+      },
+      {
+        id: 'WSNode',
+        type: 'WSNode',
+        position: screenToFlowPosition({
+          x: 480,
+          y: 130,
         }),
         data: { value: 123 },
       },
@@ -152,8 +163,8 @@ export const Flow = () => {
         id: 'MoreNode',
         type: 'MoreNode',
         position: screenToFlowPosition({
-          x: 1200,
-          y: 260,
+          x: 1280,
+          y: 240,
         }),
         data: { value: 123 },
       },
@@ -161,7 +172,7 @@ export const Flow = () => {
         id: 'FunNode',
         type: 'FunNode',
         position: screenToFlowPosition({
-          x: 1280,
+          x: 1360,
           y: 520,
         }),
         data: { value: 123 },
@@ -218,7 +229,7 @@ export const Flow = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.1 }}
             onClick={resetFlow}
-            className="fixed bottom-5 right-5 z-10 flex rounded-full bg-gray-900 p-3 text-white/80 transition hover:bg-gray-700 hover:text-white hover:shadow-lg"
+            className="fixed right-5 bottom-5 z-10 flex rounded-full bg-gray-900 p-3 text-white/80 transition hover:bg-gray-700 hover:text-white hover:shadow-lg"
           >
             <UndoIcon />
           </motion.button>

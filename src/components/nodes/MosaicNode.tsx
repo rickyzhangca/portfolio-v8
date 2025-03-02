@@ -29,12 +29,12 @@ export const MosaicNode = ({ id }: NodeProps) => {
             backgroundSize: 'cover',
           }}
         >
-          <img src={mosaic} className="relative z-10 size-32" />
+          <img src={mosaic} className="relative z-10 size-40" />
           <OpenCardLinkButton content="mosaic" />
         </div>
         <div className="flex flex-col items-center gap-1 pl-0.5">
           <p className="font-medium text-gray-900">UX Designer @ Mosaic</p>
-          <p className="text-sm text-gray-400">2020 - 23</p>
+          <p className="text-sm text-gray-400">2020 - 2023</p>
         </div>
         <div className="absolute -z-10 h-[298px] w-[238px] translate-x-0.5 translate-y-0.5 rounded-md border border-gray-200 bg-white shadow-sm transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:-rotate-[9deg]" />
         <div className="absolute -z-10 h-[298px] w-[238px] rounded-md border border-gray-200 bg-white shadow-xs transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:-rotate-6" />

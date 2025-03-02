@@ -31,15 +31,13 @@ export const EmailNode = ({ id }: NodeProps) => {
       }}
       className="flex cursor-grab items-center gap-3 rounded-full border border-gray-200 bg-white px-1.5 py-1.5 text-gray-900 active:cursor-grabbing"
     >
-      <p className="flex items-center gap-px pl-4 pr-1.5">
-        <span className="font-bold">hi</span>
-        <span>@</span>
-        <span>rickyzhang.me</span>
+      <p className="flex items-center gap-px pr-1.5 pl-4">
+        <span>ricky.zhang@queensu.ca</span>
       </p>
       <div className="flex items-center gap-1">
         <button
           onPointerDownCapture={(e) => e.stopPropagation()}
-          onClick={() => window.open('mailto:hi@rickyzhang.me')}
+          onClick={() => window.open('mailto:ricky.zhang@queensu.ca')}
           className="flex items-center justify-center rounded-full bg-blue-600 p-3 text-white transition hover:bg-blue-700"
         >
           <MailIcon />
@@ -47,7 +45,7 @@ export const EmailNode = ({ id }: NodeProps) => {
         <button
           onPointerDownCapture={(e) => e.stopPropagation()}
           onClick={() => {
-            copy('hi@rickyzhang.me');
+            copy('ricky.zhang@queensu.ca');
             setIsCopied(true);
           }}
           disabled={isCopied}

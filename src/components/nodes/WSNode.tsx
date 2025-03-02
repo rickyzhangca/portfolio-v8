@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
 import { atoms } from '../../atoms';
 import { OpenCardLinkButton } from '../OpenCardLinkButton';
-import mintlifyBg from './mintlify-bg.svg';
-import mintlify from './mintlify.svg';
+import ws from './ws.svg';
 
-export const MintlifyNode = ({ id }: NodeProps) => {
+export const WSNode = ({ id }: NodeProps) => {
   const [currentDraggingNode] = useAtom(atoms.currentDraggingNode);
   const isDragging = currentDraggingNode === id;
 
@@ -22,19 +21,16 @@ export const MintlifyNode = ({ id }: NodeProps) => {
       className="group"
     >
       <div className="flex flex-col gap-2.5 rounded-md border border-gray-200 bg-white p-2 pb-2.5 shadow-sm">
-        <div className="relative overflow-hidden rounded-sm bg-black p-12">
-          <img src={mintlify} className="relative z-10 size-40" />
-          <img src={mintlifyBg} className="absolute inset-0" />
-          <OpenCardLinkButton content="mintlify" />
+        <div className="relative size-68 rounded-sm bg-[#005DAA]">
+          <img src={ws} className="w-full" />
+          <OpenCardLinkButton className="text-[#005DAA]" content="rbc" />
         </div>
         <div className="flex flex-col items-center gap-1 pl-0.5">
           <p className="font-medium text-gray-900">
-            Design Engineer @ Mintlify
+            Design Engineer @ Wealthsimple
           </p>
-          <p className="text-sm text-gray-400">2024</p>
+          <p className="text-sm text-gray-400">2024 - Present</p>
         </div>
-        <div className="absolute -z-10 h-[298px] w-[238px] translate-x-0.5 translate-y-0.5 rounded-md border border-gray-200 bg-white shadow-sm transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:-rotate-[9deg]" />
-        <div className="absolute -z-10 h-[298px] w-[238px] rounded-md border border-gray-200 bg-white shadow-xs transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:-rotate-6" />
         <div className="absolute -z-10 h-[298px] w-[238px] -translate-x-0.5 -translate-y-0.5 rounded-md border border-gray-200 bg-white shadow-sm transition group-hover:translate-x-0 group-hover:translate-y-0 group-hover:-rotate-3" />
       </div>
     </motion.div>
