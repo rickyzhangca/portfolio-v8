@@ -1,61 +1,35 @@
+import { HeaderCard } from '../../components/HeaderCard';
+import { HighlightCard } from '../../components/HighlightCard';
 import { PageLayout } from '../../components/PageLayout';
+import amplify from './amplify.webp';
+
+import product from './product.webp';
+import pyspark from './pyspark.webp';
+import redesign from './redesign.webp';
 
 export const RBC = () => {
   return (
     <PageLayout>
-      <h1>RBC</h1>
-      Due to NDA I am not able to share the projects I worked on at RBC. Please
-      reach out if you would like to learn more about my work!
-      <section>
-        <h2>Leadership in AIOps Product Development</h2>
-        <ul>
-          <li>
-            Led product design and front-end development for 4 internal AIOps
-            products
-          </li>
-          <li>Balanced user-centric design with technical implementation</li>
-          <li>
-            Collaborated with cross-functional teams including data scientists
-            and backend engineers
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Scaling Products for Complex Data</h2>
-        <ul>
-          <li>
-            Defined UI/UX strategy for 2 AIOps products to handle increased data
-            complexity
-          </li>
-          <li>
-            Implemented features to scale products, serving multiple times more
-            teams
-          </li>
-          <li>
-            Redesigned interfaces to accommodate larger data volumes without
-            compromising performance
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Developer Tool for Data Engineers</h2>
-        <ul>
-          <li>
-            Designed and built a tool to help data engineers manage PySpark jobs
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Contributing to the Design and Engineering Community</h2>
-        <ul>
-          <li>Mentored and judged two years of RBC Amplify projects</li>
-        </ul>
-      </section>
-      <p>
-        These projects showcased my ability to combine UX design and front-end
-        development skills to create effective solutions for complex,
-        data-driven challenges in a large financial institution.
-      </p>
+      <HeaderCard
+        title="RBC, AIOps"
+        subtitle="I worked at RBC as a design engineer in AIOps team, designing and building interfaces for internal AI tools. Due to NDA I am not able to share much publicly. Shoot me an email if you would like to learn more about my work!"
+      />
+      <div className="grid gap-2 md:grid-cols-2">
+        <HighlightCard image={product} title="New internal AIOps products" />
+        <HighlightCard
+          image={redesign}
+          title="Redesign UI for larger data volumes"
+        />
+        <HighlightCard
+          image={pyspark}
+          title="Internal tool to help data engineers manage PySpark jobs"
+        />
+        <HighlightCard
+          image={amplify}
+          notShipped
+          title="Mentor and judge two years of RBC Amplify projects"
+        />
+      </div>
     </PageLayout>
   );
 };

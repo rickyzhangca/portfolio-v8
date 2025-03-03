@@ -17,7 +17,7 @@ export const Image = ({
         }}
         src={src}
         className={tw(
-          'not-prose h-96 w-full cursor-pointer rounded-xl border border-gray-200 bg-gray-100 object-contain p-1',
+          'not-prose h-96 w-full cursor-pointer rounded-2xl border border-gray-200 bg-gray-700 object-contain',
           className,
         )}
       />
@@ -25,12 +25,11 @@ export const Image = ({
   }
 
   return (
-    <img
-      src={src}
-      className={tw(
-        'not-prose h-96 w-full rounded-xl border border-gray-200 bg-gray-100 object-contain p-1',
-        className,
-      )}
-    />
+    <div className={tw('not-prose w-full', className)}>
+      <img
+        src={src}
+        className="m-auto h-96 rounded-2xl border border-gray-200 object-contain"
+      />
+    </div>
   );
 };

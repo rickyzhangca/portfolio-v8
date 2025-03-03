@@ -242,7 +242,7 @@ export const Flow = () => {
           <Portal.Root onClick={() => setDisplayContent(null)}>
             {Contents[displayContent]}
             <motion.div
-              className="fixed inset-0 z-10 bg-white/50 backdrop-blur-sm"
+              className="fixed inset-0 z-10 bg-black/10 backdrop-blur-lg"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}

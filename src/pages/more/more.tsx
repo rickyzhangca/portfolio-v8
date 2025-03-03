@@ -10,6 +10,7 @@ import afterMirror3 from './after-mirror-3.webp';
 import beforeMirror from './before-mirror.webp';
 import demo from './demo.webm';
 import figKiwi from './fig-kiwi.webp';
+import fprints from './fprints.webp';
 import logo3 from './logo-3.webp';
 import logo5 from './logo-5.webp';
 import logo6 from './logo-6.webp';
@@ -19,6 +20,27 @@ import octiconsReact from './octicons-react.svg';
 import octiconsWeb from './octicons-web.webp';
 import summarySlides from './summary-slides.webp';
 import twitterQuote from './twitter-quote.webp';
+
+const Fprints = () => (
+  <>
+    <h2>Fprints</h2>
+    <p>
+      Factorio is a factory-building game where you design and build your own
+      factories. Players can build complex layouts and share via encoded strings
+      - blueprints.
+    </p>
+    <p>
+      I created{' '}
+      <a href="https://fprints.xyz" target="_blank" rel="noreferrer">
+        Fprints
+      </a>
+      . A platform where players can publish their blueprints and find
+      inspiration from others. It now has over 137K visits, 550+ users, and
+      stores nearly 400 blueprints.
+    </p>
+    <img src={fprints} className="h-[560px] rounded-lg" />
+  </>
+);
 
 const FigKiwiToolbox = () => (
   <>
@@ -43,7 +65,7 @@ const FigKiwiToolbox = () => (
       into JSON. The toolbox is greatly inspired by Sketch team's Figma file
       importer and have inspired many other developers on Reddit.
     </p>
-    <Image src={figKiwi} className="h-[560px] bg-gray-900 p-6" />
+    <img src={figKiwi} className="h-[560px] rounded-lg" />
   </>
 );
 
@@ -83,10 +105,10 @@ const MirrorActualSize = () => (
       Figma Mirror, and we have received positive feedback from users who have
       tried it.
     </p>
-    <div className="grid grid-cols-2 gap-2">
-      <Image src={afterMirror1} />
-      <Image src={afterMirror2} />
-      <Image src={afterMirror3} className="col-span-2" />
+    <div className="grid grid-cols-2 gap-2 rounded-2xl border border-gray-200">
+      <img src={afterMirror1} />
+      <img src={afterMirror2} />
+      <img src={afterMirror3} className="col-span-2" />
     </div>
   </>
 );
@@ -117,7 +139,7 @@ const Slides = () => (
       title="Slides"
       description="Add controls (interactive, of course) to the frames so you can
                 use them as slides."
-      count="11.3k"
+      count="12.4k"
       href="https://www.figma.com/community/plugin/1050766825375940133/slides"
     />
     <p>
@@ -157,11 +179,14 @@ const AppleSummarySlides = () => (
       title="Apple summary slides"
       description="This file collects every single summary slide Apple used in
                 their events."
-      count="8.4k"
+      count="12.7k"
       label="View in Community"
       href="https://www.figma.com/community/file/1150817983915754582/all-apple-event-summary-slides-2019-2024"
     />
-    <Image src={summarySlides} className="mt-4" />
+    <img
+      src={summarySlides}
+      className="mt-4 rounded-xl border border-gray-200"
+    />
     <p>And the community has loved it!</p>
     <div className="not-prose my-8 flex justify-center gap-3 rounded-xl border border-gray-200 bg-gray-100 px-4">
       <Tweet id={'1606746044867530753'} />
@@ -254,12 +279,15 @@ import { ZapIcon } from 'octicons-extended-react';`}
 export const More = () => {
   return (
     <PageLayout>
-      <h1>My fun projects</h1>
-      <FigKiwiToolbox />
-      <MirrorActualSize />
-      <Slides />
-      <AppleSummarySlides />
-      <OcticonsExtended />
+      <div className="prose w-full max-w-full rounded-2xl bg-white p-3 text-start md:p-8">
+        <h1>My fun projects</h1>
+        <Fprints />
+        <FigKiwiToolbox />
+        <MirrorActualSize />
+        <Slides />
+        <AppleSummarySlides />
+        <OcticonsExtended />
+      </div>
     </PageLayout>
   );
 };

@@ -11,7 +11,7 @@ export const PageLayout = ({ children }: { children: React.ReactNode }) => {
         duration: 0.2,
         type: 'easeInOut',
       }}
-      className="fixed inset-0 z-20 overflow-auto p-14"
+      className="fixed inset-0 z-20 overflow-auto p-3 md:p-6 lg:p-8"
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -23,15 +23,11 @@ export const PageLayout = ({ children }: { children: React.ReactNode }) => {
           bounce: 0.4,
         }}
         onClick={(e) => e.stopPropagation()}
-        className="mx-auto max-w-5xl overflow-auto rounded-3xl border border-gray-200 bg-white shadow-xl"
+        className="mx-auto flex max-w-5xl flex-col items-center gap-3 md:gap-8"
       >
-        <div className="px-8 pt-8">
-          <BackButton />
-        </div>
-        <div className="prose m-16 max-w-full">{children}</div>
-        <div className="px-8 pb-8">
-          <BackButton />
-        </div>
+        <BackButton />
+        <div className="flex w-full flex-col gap-2 text-center">{children}</div>
+        <BackButton />
       </motion.div>
     </motion.div>
   );

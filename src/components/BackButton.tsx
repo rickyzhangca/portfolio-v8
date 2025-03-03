@@ -7,7 +7,7 @@ export const BackButton = () => {
 
   return (
     <button
-      className="flex items-center gap-1 rounded-full bg-gray-900/5 py-2 pl-4 pr-6 font-medium text-gray-900/50 outline-hidden transition hover:bg-gray-900/10 hover:text-gray-900/50"
+      className="z-20 flex cursor-pointer items-center gap-2 rounded-full border border-gray-200 bg-white py-3 pr-8 pl-6 font-medium text-gray-950 outline-hidden transition hover:shadow-2xl"
       onClick={() => setDisplayContent(null)}
     >
       <ArrowLeftIcon size={20} />
