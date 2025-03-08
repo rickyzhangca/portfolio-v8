@@ -1,0 +1,20 @@
+{
+  "redirects": [
+    {
+      "source": "/spark2025checklist",
+      "destination": "https://www.figma.com/design/gV50xRFbRvzi6vOVUgXZxv/Checklist?node-id=1-2&t=mKW18MDE7Na8Vazj-4",
+      "permanent": false
+    },
+    {
+      "source": "/spark2025deck",
+      "destination": "https://www.figma.com/slides/pob8Ta54ZwugxGMgjON8Bz/ricky-spark2025?node-id=3-2&t=8PFb34Dx7DDaVun0-1",
+      "permanent": false
+    },
+    {
+      "source": "/spark2025slides",
+      "destination": "https://google.com",
+      "permanent": false
+    }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
