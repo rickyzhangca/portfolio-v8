@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "up": "upgrade -L"
   },
   "dependencies": {
     "@primer/octicons-react": "^19.15.1",
@@ -16,35 +17,37 @@
     "@xyflow/react": "^12.4.4",
     "clsx": "^2.1.1",
     "copy-to-clipboard": "^3.3.3",
-    "framer-motion": "^12.4.10",
-    "jotai": "^2.12.1",
+    "framer-motion": "^12.5.0",
+    "jotai": "^2.12.2",
     "react": "^19.0.0",
     "react-code-blocks": "^0.1.6",
     "react-dom": "^19.0.0",
     "react-hotkeys-hook": "^4.6.1",
     "react-player": "^2.16.0",
-    "react-router-dom": "^7.3.0",
+    "react-router-dom": "^7.4.0",
     "react-tweet": "^3.2.2",
     "tailwind-merge": "^3.0.2",
     "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.12",
+    "@tailwindcss/postcss": "^4.0.15",
     "@tailwindcss/typography": "^0.5.16",
-    "@types/react": "^19.0.10",
+    "@types/react": "^19.0.12",
     "@types/react-dom": "^19.0.4",
-    "@typescript-eslint/eslint-plugin": "^8.26.0",
-    "@typescript-eslint/parser": "^8.26.0",
+    "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "@typescript-eslint/parser": "^8.27.0",
     "@vitejs/plugin-react": "^4.3.4",
-    "eslint": "^9.22.0",
+    "babel-plugin-react-compiler": "19.0.0-beta-3229e95-20250315",
+    "eslint": "^9.23.0",
+    "eslint-plugin-react-compiler": "19.0.0-beta-3229e95-20250315",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.0.12",
+    "tailwindcss": "^4.0.15",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.8.2",
-    "vite": "^6.2.1"
+    "vite": "^6.2.2"
   }
 }
