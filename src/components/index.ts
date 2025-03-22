@@ -13,6 +13,7 @@ export * from './MosaicNode';
 export * from './NoteNode';
 export * from './OpenCardLinkButton';
 export * from './PageLayout';
+export * from './ProjectCard';
 export * from './RBCNode';
 export * from './ResumeNode';
 export * from './ShippedTag';

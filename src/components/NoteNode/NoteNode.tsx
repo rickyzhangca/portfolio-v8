@@ -23,24 +23,24 @@ export const NoteNode = ({ id }: NodeProps) => {
     >
       <div className="flex h-72 w-64 flex-col justify-between gap-8 rounded-md bg-[#FEF296] p-5 shadow-md">
         <div className="flex flex-col gap-3">
-          <p className="font-medium leading-snug text-gray-800">
+          <p className="leading-snug font-medium text-gray-800">
             Good design is as much engineering as it is ideation.
           </p>
           <p className="text-sm text-gray-800/60">
-            It's not just about conceptualizing an experience, but also how it
-            works, how it is crafted into reality.
+            It's not just about conceptualizing an experience, but also how that
+            experience works, and how it is crafted by people into reality.
           </p>
         </div>
         <button
-          className="w-fit text-sm text-gray-800 underline outline-hidden"
+          className="w-fit text-sm text-gray-800 underline outline-hidden hover:cursor-pointer"
           onClick={() => setDisplayContent('why')}
         >
-          Why I design & code →
+          About Ricky →
         </button>
       </div>
       <img
         src={pen}
-        className="absolute -bottom-8 -right-12 w-24 transition group-hover:-translate-x-4 group-hover:translate-y-2 group-hover:-rotate-6 group-hover:scale-110"
+        className="absolute -right-12 -bottom-8 w-24 transition group-hover:-translate-x-4 group-hover:translate-y-2 group-hover:scale-110 group-hover:-rotate-6"
       />
     </motion.div>
   );

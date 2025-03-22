@@ -1,14 +1,13 @@
 import { tw } from '../utils/tw';
 
-export const Image = ({
-  src,
-  href,
-  className,
-}: {
+type ImageProps = {
   src: string;
   href?: string;
   className?: string;
-}) => {
+  autoHeight?: boolean;
+};
+
+export const Image = ({ src, href, className, autoHeight }: ImageProps) => {
   if (href) {
     return (
       <img
@@ -17,7 +16,8 @@ export const Image = ({
         }}
         src={src}
         className={tw(
-          'not-prose h-96 w-full cursor-pointer rounded-2xl border border-gray-200 bg-gray-700 object-contain',
+          'not-prose w-full cursor-pointer rounded-xl border border-gray-200 bg-gray-700 object-contain',
+          autoHeight ? 'h-auto' : 'h-96',
           className,
         )}
       />
@@ -25,10 +25,14 @@ export const Image = ({
   }
 
   return (
-    <div className={tw('not-prose w-full', className)}>
+    <div className={tw('not-prose w-full')}>
       <img
         src={src}
-        className="m-auto h-96 rounded-2xl border border-gray-200 object-contain"
+        className={tw(
+          'm-auto rounded-xl border border-gray-200 object-contain',
+          autoHeight ? 'h-auto' : 'h-96',
+          className,
+        )}
       />
     </div>
   );

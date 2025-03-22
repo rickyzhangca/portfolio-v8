@@ -1,21 +1,23 @@
 import { ArrowUpRightIcon } from '@primer/octicons-react';
 import figma from './figma.svg';
 
-export const PluginCard = ({
-  title,
-  description,
-  image,
-  count,
-  label,
-  href,
-}: {
+type FigmaCardProps = {
   title: string;
   description: string;
   image: string;
   count: string;
   label?: string;
   href: string;
-}) => {
+};
+
+export const FigmaCard = ({
+  title,
+  description,
+  image,
+  count,
+  label,
+  href,
+}: FigmaCardProps) => {
   return (
     <div className="not-prose flex items-center justify-between rounded-xl border border-gray-200 bg-gray-100 p-4">
       <div className="flex items-center gap-4">
@@ -31,7 +33,7 @@ export const PluginCard = ({
           {count}
         </div>
         <a
-          className="hover:bg-gray-80 flex items-center gap-2 rounded-full bg-gray-900 py-3 pl-4 pr-5 text-sm text-white"
+          className="hover:bg-gray-80 flex items-center gap-2 rounded-full bg-gray-900 py-3 pr-5 pl-4 text-sm text-white"
           href={href}
           target="_blank"
         >

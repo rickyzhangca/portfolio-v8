@@ -24,7 +24,7 @@ export const MoreNode = ({ id }: NodeProps) => {
       className="group relative size-52"
     >
       <button
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-sm font-medium text-gray-900 underline opacity-0 outline-hidden transition group-hover:opacity-100"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-sm font-medium text-gray-900 underline opacity-0 outline-hidden transition group-hover:opacity-100 hover:cursor-pointer"
         onClick={() => setDisplayContent('more')}
       >
         Fun projects →
@@ -47,7 +47,7 @@ export const MoreNode = ({ id }: NodeProps) => {
       />
       <img
         src={logo4}
-        className="absolute size-20 translate-x-20 translate-y-4 rotate-6 rounded-[14px] shadow-xs transition group-hover:-translate-y-2 group-hover:translate-x-28 group-hover:shadow-sm"
+        className="absolute size-20 translate-x-20 translate-y-4 rotate-6 rounded-[14px] shadow-xs transition group-hover:translate-x-28 group-hover:-translate-y-2 group-hover:shadow-sm"
       />
       <img
         src={logo5}
