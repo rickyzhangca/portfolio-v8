@@ -27,17 +27,6 @@ export const Why = () => {
       <div className="prose w-full max-w-full rounded-2xl bg-white p-3 text-start md:p-8">
         <h2>Designer who codes</h2>
         <p>
-          My journey started as a UI/UX designer at Mosaic, a 3D printing
-          startup, where I tackled the challenges of creating user interfaces
-          for various IoT devices.
-        </p>
-        <p>
-          This experience ignited my curiosity about the technical aspects,
-          leading me to become a UX engineer at RBC AIOps team, and eventually,
-          a design engineer at Mintlify, then Wealthsimple - my dream company
-          making my favorite product.
-        </p>
-        <p>
           The seed of blending design and engineering was planted in the school
           when I read about{' '}
           <a
@@ -49,25 +38,45 @@ export const Why = () => {
           by a Google's UX engineer. I was fascinated by the idea of being at
           the intersection of design and engineering.
         </p>
+        <p>
+          My journey started as a UI/UX designer at Mosaic, a 3D printing
+          startup, where I tackled the challenges of creating user interfaces
+          for various IoT devices.
+        </p>
+        <p>
+          This experience ignited my curiosity about the technical aspects,
+          leading me to become a UX engineer at RBC AIOps team, and eventually,
+          a design engineer at Mintlify, then Wealthsimple - my dream company
+          making my favorite product. The design system team enabled me to fully
+          leverage my multi-disciplinary skills.
+        </p>
       </div>
       <div className="prose w-full max-w-full rounded-2xl bg-white p-3 text-start md:p-8">
         <h2>What Drives Me</h2>
         <ol>
           <li>
-            <strong>Solving Complex Problems:</strong> At Mosaic, I designed UIs
-            that could scale across various IoT devices with different screen
-            sizes and pixel densities.
+            <strong>Ownership on problem areas:</strong> I love being the owner
+            of a problem area - structuring the plans, and leading the way to a
+            solution. A good degree of ownership creates strong motivation and
+            sense of accomplishment.
           </li>
           <li>
-            <strong>Creating Impactful Tools:</strong> One of my proudest
-            achievements was creating a comprehensive design system that
-            standardized design elements and streamlined the development
-            process.
+            <strong>Creating impactful tools:</strong> I love empowering others.
+            Creating better UX and DX for internal teams is exciting. One of my
+            proudest achievements was creating Mosaic's design system that is
+            still used till today.
           </li>
           <li>
-            <strong>See my work being used:</strong> I love to see my work being
-            used by others and making an impact. At the end, a great experience
-            is only great when it's being used by others.
+            <strong>Seeing my work being used:</strong> I love to see my work
+            being used by users or other designers/engineers, and making an
+            impact. At the end, a great experience is only great when it's being
+            used by others.
+          </li>
+          <li>
+            <strong>Ambitious team that keep things simple:</strong> I love
+            thinking about the big picture and where we could go next. Being
+            free from corporate environment allows the team to look ahead,
+            discover and solve problems without attrition.
           </li>
         </ol>
       </div>
