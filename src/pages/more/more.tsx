@@ -19,8 +19,28 @@ import octiconsFigma from './octicons-figma.webp';
 import octiconsWeb from './octicons-web.webp';
 import paopaoLogo from './paopao-logo.svg';
 import paopao from './paopao.webp';
+import spellbook from './spellbook.webp';
 import summarySlides from './summary-slides.webp';
 import twitterQuote from './twitter-quote.webp';
+
+const Spellbook = () => (
+  <ProjectCard image={spellbook} title="Spellbook" status="Active">
+    <p>
+      ChatGPT 4o's image generation capability had a huge leap forward in early
+      2025. It is better than ever on understanding prompts and adhering to
+      instructions (that is written in natural language).
+    </p>
+    <p>
+      So I created{' '}
+      <a href="https://spellbook.space" target="_blank" rel="noreferrer">
+        Spellbook
+      </a>
+      . A platform for people to share and grab prompts that really work -
+      guaranteed to reliably generate images in a well defined style for any
+      given subject.
+    </p>
+  </ProjectCard>
+);
 
 const Fprints = () => (
   <ProjectCard image={fprints} title="Fprints" status="Maintaining">
@@ -288,6 +308,7 @@ export const More = () => {
         subtitle="I spent most of my free time on side projects that speak for my passion. It's a way to build without constraints from work, and a freedom to explore latest ideas and techs."
       />
       <div className="flex flex-col gap-2">
+        <Spellbook />
         <Fprints />
         <FigKiwiToolbox />
         <AppleSummarySlides />
