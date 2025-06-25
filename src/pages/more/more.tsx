@@ -12,19 +12,103 @@ import beforeMirror from './before-mirror.webp';
 import demo from './demo.webm';
 import figKiwi from './fig-kiwi.webp';
 import fprints from './fprints.webp';
+import kiboUI from './kibo-ui.mov';
+import logo0 from './logo-0.webp';
+import logo1 from './logo-1.webp';
+import logo2 from './logo-2.webp';
 import logo3 from './logo-3.webp';
+import logo4 from './logo-4.webp';
 import logo5 from './logo-5.webp';
 import logo6 from './logo-6.webp';
+import logo7 from './logo-7.webp';
+import logo8 from './logo-8.webp';
+import logo9 from './logo-9.webp';
 import octiconsFigma from './octicons-figma.webp';
 import octiconsWeb from './octicons-web.webp';
 import paopaoLogo from './paopao-logo.svg';
 import paopao from './paopao.webp';
 import spellbook from './spellbook.webp';
 import summarySlides from './summary-slides.webp';
+import svgoui from './svgoui.webp';
 import twitterQuote from './twitter-quote.webp';
 
+const KiboUI = () => (
+  <ProjectCard logo={logo8} title="Kibo UI" status="Active">
+    <p>
+      I love design engineering, design systems and building components. So I'm
+      enjoying creating components for the open source component library{' '}
+      <a href="https://www.kibo-ui.com/" target="_blank" rel="noreferrer">
+        Kibo UI
+      </a>{' '}
+      created by Vercel's engineer{' '}
+      <a
+        href="https://twitter.com/haydenbleasel"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Hayden Bleasel
+      </a>
+      . More to come!
+    </p>
+    <div className="not-prose relative overflow-hidden rounded-xl border border-gray-200">
+      <div className="absolute h-full w-full border border-white" />
+      <ReactPlayer
+        url={kiboUI}
+        controls
+        width="100%"
+        height="auto"
+        playing
+        loop
+      />
+    </div>
+  </ProjectCard>
+);
+
+const SVGOUI = () => (
+  <ProjectCard logo={logo7} image={svgoui} title="SVGOUI" status="Maintaining">
+    <p>
+      When building the credit card component for Kibo UI, I had to deal with a
+      number of credit card network icon SVGs. So I build a UI for SVGO to
+      optimize them so I can publish them to{' '}
+      <a
+        href="https://www.npmjs.com/package/react-card-network-icons"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <code className="rounded-lg bg-gray-200 p-1.5">
+          react-card-network-icons
+        </code>
+      </a>
+      .
+    </p>
+    <p>
+      SVGOUI is a UI for SVG optimizer tool{' '}
+      <a href="https://github.com/svg/svgo" target="_blank" rel="noreferrer">
+        SVGO
+      </a>
+      . Comparing to the predecessor{' '}
+      <a
+        href="https://github.com/interlace-app/svgui"
+        target="_blank"
+        rel="noreferrer"
+      >
+        SVGOMG
+      </a>
+      , it runs on newer SVGO core and modern front-end stacks, has a more
+      friendly UI, and packs a number of quality of life features.
+    </p>
+    <p>
+      You can try it out{' '}
+      <a href="https://svgoui.pages.dev/" target="_blank" rel="noreferrer">
+        here
+      </a>
+      .
+    </p>
+  </ProjectCard>
+);
+
 const Spellbook = () => (
-  <ProjectCard image={spellbook} title="Spellbook" status="Active">
+  <ProjectCard logo={logo4} image={spellbook} title="Spellbook" status="Active">
     <p>
       ChatGPT 4o's image generation capability had a huge leap forward in early
       2025. It is better than ever on understanding prompts and adhering to
@@ -43,7 +127,12 @@ const Spellbook = () => (
 );
 
 const Fprints = () => (
-  <ProjectCard image={fprints} title="Fprints" status="Maintaining">
+  <ProjectCard
+    logo={logo1}
+    image={fprints}
+    title="Fprints"
+    status="Maintaining"
+  >
     <p>
       <a
         href="https://store.steampowered.com/app/427520/Factorio/"
@@ -69,7 +158,12 @@ const Fprints = () => (
 );
 
 const FigKiwiToolbox = () => (
-  <ProjectCard image={figKiwi} title="fig-kiwi-toolbox" status="Archived">
+  <ProjectCard
+    logo={logo9}
+    image={figKiwi}
+    title="fig-kiwi-toolbox"
+    status="Archived"
+  >
     <p>
       In 2023, I had a vision of creating a tool that would help both designers
       and developers to make and maintain design system. Due to the closed
@@ -94,7 +188,7 @@ const FigKiwiToolbox = () => (
 );
 
 const MirrorActualSize = () => (
-  <ProjectCard title="Mirror Actual Size" status="Maintaining">
+  <ProjectCard logo={logo6} title="Mirror Actual Size" status="Maintaining">
     <p>
       <a href="https://www.figma.com/mirror" target="_blank" rel="noreferrer">
         Figma Mirror
@@ -137,7 +231,7 @@ const MirrorActualSize = () => (
 );
 
 const Slides = () => (
-  <ProjectCard title="Slides" status="Archived">
+  <ProjectCard logo={logo5} title="Slides" status="Archived">
     <p>
       Many designers{' '}
       <a href="https://www.figma.com/mirror" target="_blank" rel="noreferrer">
@@ -186,7 +280,7 @@ const Slides = () => (
 );
 
 const AppleSummarySlides = () => (
-  <ProjectCard title="Apple summary slides" status="Active">
+  <ProjectCard logo={logo3} title="Apple summary slides" status="Active">
     <p>
       In September 2019, Apple introduced a new visual language called Bento for
       use in their events, which is characterized by a series of well-organized
@@ -222,7 +316,7 @@ const AppleSummarySlides = () => (
 );
 
 const OcticonsExtended = () => (
-  <ProjectCard title="Octicons Extended" status="Archived">
+  <ProjectCard logo={logo0} title="Octicons Extended" status="Archived">
     <p>
       As a side project, I created octicons-extended, a growing collection of
       icons that allows designers and developers to bring more variety to their
@@ -271,7 +365,12 @@ import { ZapIcon } from 'octicons-extended-react';`}
 );
 
 const Paopao = () => (
-  <ProjectCard title="Paopao Stickers" image={paopao} status="Maintaining">
+  <ProjectCard
+    logo={logo2}
+    title="Paopao Stickers"
+    image={paopao}
+    status="Maintaining"
+  >
     <p>
       The Paopao stickers are a popular and well-known set of stickers in
       mainland China, and they have been used to create countless memes.
@@ -308,6 +407,8 @@ export const More = () => {
         subtitle="I spent most of my free time on side projects that speak for my passion. It's a way to build without constraints from work, and a freedom to explore latest ideas and techs."
       />
       <div className="flex flex-col gap-2">
+        <KiboUI />
+        <SVGOUI />
         <Spellbook />
         <Fprints />
         <FigKiwiToolbox />

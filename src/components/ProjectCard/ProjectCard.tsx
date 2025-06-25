@@ -4,6 +4,7 @@ import { Image } from '../Image';
 
 type ProjectCardProps = {
   image?: string;
+  logo: string;
   title: string;
   status: 'Active' | 'Maintaining' | 'Archived';
   children: ReactNode;
@@ -11,6 +12,7 @@ type ProjectCardProps = {
 
 export const ProjectCard = ({
   image,
+  logo,
   title,
   status,
   children,
@@ -26,7 +28,8 @@ export const ProjectCard = ({
         )}
       />
       <div className="z-10 flex flex-col gap-5">
-        <h2 className="flex items-center gap-2 text-2xl font-bold">
+        <h2 className="flex items-center gap-3 text-2xl font-bold">
+          <img src={logo} alt="project logo" className="size-12" />
           {title}
           <div
             className={tw(
