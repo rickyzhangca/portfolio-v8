@@ -11,7 +11,7 @@
     "up": "upgrade -L"
   },
   "dependencies": {
-    "@primer/octicons-react": "^19.15.2",
+    "@primer/octicons-react": "^19.15.3",
     "@radix-ui/react-portal": "^1.1.9",
     "@radix-ui/react-tooltip": "^1.2.7",
     "@xyflow/react": "^12.7.1",
