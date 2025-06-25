@@ -9,7 +9,7 @@ export const PageLayout = ({ children }: { children: React.ReactNode }) => {
       exit={{ opacity: 0 }}
       transition={{
         duration: 0.2,
-        type: 'easeInOut',
+        ease: 'easeInOut',
       }}
       className="fixed inset-0 z-20 overflow-auto p-3 md:p-6 lg:p-8"
     >
