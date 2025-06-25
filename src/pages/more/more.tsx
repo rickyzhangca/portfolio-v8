@@ -212,7 +212,7 @@ const MirrorActualSize = () => (
       image={logo6}
       title="Mirror Actual Size"
       description="A Figma plugin that ensures content is displayed at its actual size when mirrored to a device."
-      count="3.6k"
+      count="3.8k"
       href="https://www.figma.com/community/plugin/989887108667938748/mirror-actual-size"
     />
     <p>
@@ -255,7 +255,7 @@ const Slides = () => (
       title="Slides"
       description="Add controls (interactive, of course) to the frames so you can
                 use them as slides."
-      count="12.6k"
+      count="13.0k"
       href="https://www.figma.com/community/plugin/1050766825375940133/slides"
     />
     <p>
@@ -290,7 +290,7 @@ const AppleSummarySlides = () => (
     <p>
       In response to this demand, I created a collection of Bento summary slides
       that is accessible on <a>web</a> and Figma. This collection has allowed
-      over 13K designers and 30K visitors to easily access and get inspirations
+      over 14K designers and 30K visitors to easily access and get inspirations
       from the slides.
     </p>
     <FigmaCard
@@ -298,7 +298,7 @@ const AppleSummarySlides = () => (
       title="Apple summary slides"
       description="This file collects every single summary slide Apple used in
                 their events."
-      count="13k"
+      count="14.6k"
       label="View in Community"
       href="https://www.figma.com/community/file/1150817983915754582/all-apple-event-summary-slides-2019-2024"
     />
@@ -393,7 +393,7 @@ const Paopao = () => (
       description="A collection of 50 vectorized Paopao stickers"
       label="View in Community"
       image={paopaoLogo}
-      count="553"
+      count="585"
       href="https://www.figma.com/community/file/1070232689050503920"
     />
   </ProjectCard>
