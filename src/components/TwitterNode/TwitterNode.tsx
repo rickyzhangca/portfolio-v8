@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon } from '@primer/octicons-react';
+import { ArrowUpRightIcon } from '@phosphor-icons/react';
 import { NodeProps } from '@xyflow/react';
 import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
@@ -25,7 +25,7 @@ export const TwitterNode = ({ id }: NodeProps) => {
           onClick={() => window.open('https://x.com/rickyrickyriri', '_blank')}
           className="nodrag flex items-center justify-center rounded-full bg-white/20 p-3 text-white transition hover:bg-white/30"
         >
-          <ArrowUpRightIcon />
+          <ArrowUpRightIcon size={20} weight="bold" />
         </button>
       </div>
     </motion.div>

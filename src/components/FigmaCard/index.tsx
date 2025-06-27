@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon } from '@primer/octicons-react';
+import { ArrowUpRightIcon } from '@phosphor-icons/react';
 import figma from './figma.svg';
 
 type FigmaCardProps = {
@@ -29,7 +29,7 @@ export const FigmaCard = ({
       </div>
       <div className="flex gap-4">
         <div className="flex items-center justify-center text-gray-400">
-          <ArrowUpRightIcon />
+          <ArrowUpRightIcon size={20} weight="bold" />
           {count}
         </div>
         <a

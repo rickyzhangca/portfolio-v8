@@ -1,10 +1,19 @@
-import { CodeBlock, dracula } from 'react-code-blocks';
 import ReactPlayer from 'react-player';
 import { Tweet } from 'react-tweet';
 import { HeaderCard, ProjectCard } from '../../components';
 import { FigmaCard } from '../../components/FigmaCard';
 import { Image } from '../../components/Image';
 import { PageLayout } from '../../components/PageLayout';
+import {
+  CodeBlock,
+  CodeBlockBody,
+  CodeBlockContent,
+  CodeBlockFilename,
+  CodeBlockFiles,
+  CodeBlockHeader,
+  CodeBlockItem,
+  type BundledLanguage,
+} from '../../components/ui/kibo-ui/code-block';
 import afterMirror1 from './after-mirror-1.webp';
 import afterMirror2 from './after-mirror-2.webp';
 import afterMirror3 from './after-mirror-3.webp';
@@ -53,12 +62,13 @@ const KiboUI = () => (
     <div className="not-prose relative overflow-hidden rounded-xl border border-gray-200">
       <div className="absolute h-full w-full border border-white" />
       <ReactPlayer
-        url={kiboUI}
+        playing
+        loop
+        muted
+        src={kiboUI}
         controls
         width="100%"
         height="auto"
-        playing
-        loop
       />
     </div>
   </ProjectCard>
@@ -270,7 +280,7 @@ const Slides = () => (
         playing
         loop
         muted
-        url={demo}
+        src={demo}
         playbackRate={1.6}
         width="100%"
         height="100%"
@@ -352,14 +362,37 @@ const OcticonsExtended = () => (
     </p>
     <div className="not-prose overflow-hidden rounded-lg">
       <CodeBlock
-        text={`// using original octicons 
+        data={[
+          {
+            code: `// using original octicons 
 import { ZapIcon } from '@primer/octicons-react';
 // switching to octicons-extended 
-import { ZapIcon } from 'octicons-extended-react';`}
-        language={'javascript'}
-        showLineNumbers
-        theme={dracula}
-      />
+import { ZapIcon } from 'octicons-extended-react';`,
+            language: 'typescript',
+            filename: 'my-component.tsx',
+          },
+        ]}
+        defaultValue="typescript"
+      >
+        <CodeBlockHeader>
+          <CodeBlockFiles>
+            {(item) => (
+              <CodeBlockFilename key={item.language} value={item.language}>
+                {item.filename}
+              </CodeBlockFilename>
+            )}
+          </CodeBlockFiles>
+        </CodeBlockHeader>
+        <CodeBlockBody>
+          {(item) => (
+            <CodeBlockItem key={item.language} value={item.language}>
+              <CodeBlockContent language={item.language as BundledLanguage}>
+                {item.code}
+              </CodeBlockContent>
+            </CodeBlockItem>
+          )}
+        </CodeBlockBody>
+      </CodeBlock>
     </div>
   </ProjectCard>
 );

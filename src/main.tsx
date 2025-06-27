@@ -1,4 +1,5 @@
 import { ReactFlowProvider } from '@xyflow/react';
+import { NuqsAdapter } from 'nuqs/adapters/react-router/v7';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
@@ -20,7 +21,6 @@ const router = createBrowserRouter([
     ),
   },
   {
-    // Catch-all route that redirects to the root path
     path: '*',
     element: <Navigate to="/" replace />,
   },
@@ -29,7 +29,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <TooltipProvider delayDuration={0}>
-      <RouterProvider router={router} />
+      <NuqsAdapter>
+        <RouterProvider router={router} />
+      </NuqsAdapter>
     </TooltipProvider>
   </React.StrictMode>,
 );

@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon } from '@primer/octicons-react';
+import { ArrowUpRightIcon } from '@phosphor-icons/react';
 import { NodeProps } from '@xyflow/react';
 import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
@@ -27,7 +27,7 @@ export const LinkedInNode = ({ id }: NodeProps) => {
           }
           className="nodrag flex items-center justify-center rounded-full bg-white/10 p-3 text-white transition hover:bg-white/20"
         >
-          <ArrowUpRightIcon />
+          <ArrowUpRightIcon size={20} weight="bold" />
         </button>
       </div>
     </motion.div>

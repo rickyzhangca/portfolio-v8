@@ -1,4 +1,4 @@
-import { CheckIcon, CopyIcon, MailIcon } from '@primer/octicons-react';
+import { CheckIcon, CopyIcon, EnvelopeSimpleIcon } from '@phosphor-icons/react';
 import { NodeProps } from '@xyflow/react';
 import copy from 'copy-to-clipboard';
 import { motion } from 'framer-motion';
@@ -40,7 +40,7 @@ export const EmailNode = ({ id }: NodeProps) => {
           onClick={() => window.open('mailto:ricky.zhang@queensu.ca')}
           className="flex items-center justify-center rounded-full bg-blue-600 p-3 text-white transition hover:bg-blue-700"
         >
-          <MailIcon />
+          <EnvelopeSimpleIcon size={20} weight="bold" />
         </button>
         <button
           onPointerDownCapture={(e) => e.stopPropagation()}
@@ -51,7 +51,11 @@ export const EmailNode = ({ id }: NodeProps) => {
           disabled={isCopied}
           className="flex items-center justify-center rounded-full bg-gray-100 p-3 text-gray-500 transition hover:bg-gray-200 hover:text-gray-600"
         >
-          {isCopied ? <CheckIcon /> : <CopyIcon />}
+          {isCopied ? (
+            <CheckIcon size={20} weight="bold" />
+          ) : (
+            <CopyIcon size={20} weight="bold" />
+          )}
         </button>
       </div>
     </motion.div>

@@ -1,4 +1,4 @@
-import { ArrowRightIcon } from '@primer/octicons-react';
+import { ArrowRightIcon } from '@phosphor-icons/react';
 import { useAtom } from 'jotai';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { atoms } from '../atoms';
@@ -24,7 +24,7 @@ export const OpenCardLinkButton = ({
         )}
         onClick={() => setDisplayContent(content)}
       >
-        <ArrowRightIcon size={20} />
+        <ArrowRightIcon size={20} weight="bold" />
       </button>
     </>
   );

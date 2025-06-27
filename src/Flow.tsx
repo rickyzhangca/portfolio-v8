@@ -15,9 +15,11 @@ import {
 import '@xyflow/react/dist/base.css';
 import { useCallback, useEffect, useState } from 'react';
 
-import { UndoIcon } from '@primer/octicons-react';
+import { ArrowUUpLeftIcon } from '@phosphor-icons/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useAtom } from 'jotai';
+import { parseAsString, useQueryState } from 'nuqs';
+import { useRef } from 'react';
 import { useWindowSize } from 'usehooks-ts';
 import { atoms } from './atoms';
 import {
@@ -54,7 +56,34 @@ const nodeTypes = {
 const defaultViewport: Viewport = { x: 0, y: 0, zoom: 0.9 };
 
 export const Flow = () => {
+  const [page, setPage] = useQueryState('page', parseAsString);
   const [displayContent, setDisplayContent] = useAtom(atoms.displayContent);
+
+  const isSyncingRef = useRef(false);
+
+  // sync URL -> state
+  useEffect(() => {
+    if (isSyncingRef.current) {
+      isSyncingRef.current = false;
+      return;
+    }
+    if (page !== displayContent) {
+      isSyncingRef.current = true;
+      setDisplayContent(page as keyof typeof Contents | null);
+    }
+  }, [page]);
+
+  // sync state -> URL
+  useEffect(() => {
+    if (isSyncingRef.current) {
+      isSyncingRef.current = false;
+      return;
+    }
+    if (displayContent !== page) {
+      isSyncingRef.current = true;
+      setPage(displayContent);
+    }
+  }, [displayContent, page, setPage]);
 
   const [nodes, setNodes] = useState<Node[]>([]);
   const [edges, setEdges] = useState([]);
@@ -233,7 +262,7 @@ export const Flow = () => {
             onClick={resetFlow}
             className="fixed right-5 bottom-5 z-10 flex rounded-full bg-gray-900 p-3 text-white/80 transition hover:bg-gray-700 hover:text-white hover:shadow-lg"
           >
-            <UndoIcon />
+            <ArrowUUpLeftIcon weight="bold" />
           </motion.button>
         )}
       </AnimatePresence>
