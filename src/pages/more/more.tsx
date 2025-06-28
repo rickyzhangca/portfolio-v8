@@ -2,7 +2,7 @@ import ReactPlayer from 'react-player';
 import { Tweet } from 'react-tweet';
 import { FigmaCard } from '../../components/figma-card/figma-card';
 import { HeaderCard } from '../../components/header-card/header-card';
-import { Image } from '../../components/Image';
+import { Image } from '../../components/image';
 import { PageLayout } from '../../components/page-layout';
 import { ProjectCard } from '../../components/project-card/project-card';
 import {
