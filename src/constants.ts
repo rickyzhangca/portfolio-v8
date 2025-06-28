@@ -1,1 +1,1 @@
-export const FLOW_STORAGE_KEY = 'flow';
+export const FLOW_STORAGE_KEY = 'ricky-portfolio-flow';

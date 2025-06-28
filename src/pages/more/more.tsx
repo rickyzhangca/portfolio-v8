@@ -1,10 +1,12 @@
 import ReactPlayer from 'react-player';
 import { Tweet } from 'react-tweet';
-import { HeaderCard, ProjectCard } from '../../components';
-import { FigmaCard } from '../../components/FigmaCard';
+import { FigmaCard } from '../../components/figma-card/figma-card';
+import { HeaderCard } from '../../components/header-card/header-card';
 import { Image } from '../../components/Image';
-import { PageLayout } from '../../components/PageLayout';
+import { PageLayout } from '../../components/page-layout';
+import { ProjectCard } from '../../components/project-card/project-card';
 import {
+  type BundledLanguage,
   CodeBlock,
   CodeBlockBody,
   CodeBlockContent,
@@ -12,7 +14,6 @@ import {
   CodeBlockFiles,
   CodeBlockHeader,
   CodeBlockItem,
-  type BundledLanguage,
 } from '../../components/ui/kibo-ui/code-block';
 import afterMirror1 from './after-mirror-1.webp';
 import afterMirror2 from './after-mirror-2.webp';
@@ -318,8 +319,11 @@ const AppleSummarySlides = () => (
     />
     <p>And the community has loved it!</p>
     <div className="not-prose my-8 flex justify-center gap-3 rounded-xl border border-gray-200 bg-gray-100 px-4">
+      {/** biome-ignore lint/nursery/useUniqueElementIds: is unique twitter id */}
       <Tweet id="1606746044867530753" />
+      {/** biome-ignore lint/nursery/useUniqueElementIds: is unique twitter id */}
       <Tweet id="1607124694288986112" />
+      {/** biome-ignore lint/nursery/useUniqueElementIds: is unique twitter id */}
       <Tweet id="1610783724672618496" />
     </div>
   </ProjectCard>

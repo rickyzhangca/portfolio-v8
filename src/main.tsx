@@ -7,8 +7,8 @@ import {
   Navigate,
   RouterProvider,
 } from 'react-router-dom';
-import { TooltipProvider } from './components/Tooltip.tsx';
-import { Flow } from './Flow.tsx';
+import { TooltipProvider } from './components/tooltip.tsx';
+import { Flow } from './flow.tsx';
 import './index.css';
 
 const router = createBrowserRouter([

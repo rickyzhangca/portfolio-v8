@@ -1,8 +1,8 @@
-import { Mintlify } from './mintlify/Mintlify';
+import { Mintlify } from './mintlify/mintlify';
 import { More } from './more/more';
-import { Mosaic } from './mosaic/Mosaic';
-import { RBC } from './rbc/RBC';
-import { Wealthsimple } from './wealthsimple/Wealthsimple';
+import { Mosaic } from './mosaic/mosaic';
+import { RBC } from './rbc/rbc';
+import { Wealthsimple } from './wealthsimple/wealthsimple';
 import { Why } from './why/why';
 
 export const Contents = {

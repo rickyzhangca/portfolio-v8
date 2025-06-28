@@ -1,4 +1,4 @@
-import { PageLayout } from '../../components/PageLayout';
+import { PageLayout } from '../../components/page-layout';
 import ricky from './ricky.webp';
 
 export const Why = () => {
@@ -6,7 +6,11 @@ export const Why = () => {
     <PageLayout>
       <div className="prose w-full max-w-full rounded-2xl bg-white p-3 text-start md:p-8">
         <div className="flex w-full items-center justify-center pt-4">
-          <img src={ricky} className="h-96 -rotate-4 rounded-xl shadow-xl" />
+          <img
+            src={ricky}
+            alt="ricky"
+            className="h-96 -rotate-4 rounded-xl shadow-xl"
+          />
         </div>
         <h2 className="font-semibold text-gray-400">
           I'm a <span className="text-gray-950">design engineer</span>{' '}
@@ -32,6 +36,7 @@ export const Why = () => {
           <a
             href="https://medium.com/google-design/google-maps-cb0326d165f5"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Prototyping a Smoother Map
           </a>
