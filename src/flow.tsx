@@ -31,6 +31,7 @@ import { MosaicNode } from './components/mosaic-node/mosaic-node';
 import { NoteNode } from './components/note-node/note-node';
 import { RBCNode } from './components/rbc-node/rbc-node';
 import { ResumeNode } from './components/resume-node/resume-node';
+import { SwagNode } from './components/swag-node/swag-node';
 import { TwitterNode } from './components/twitter-node/twitter-node';
 import { WSNode } from './components/ws-node/ws-node';
 import { Contents } from './pages';
@@ -48,6 +49,7 @@ const nodeTypes = {
   NoteNode: NoteNode,
   MoreNode: MoreNode,
   FunNode: FunNode,
+  SwagNode: SwagNode,
 };
 
 const defaultViewport: Viewport = { x: 0, y: 0, zoom: 0.9 };
@@ -203,6 +205,15 @@ export const Flow = () => {
         position: screenToFlowPosition({
           x: 1460,
           y: 540,
+        }),
+        data: { value: 123 },
+      },
+      {
+        id: 'SwagNode',
+        type: 'SwagNode',
+        position: screenToFlowPosition({
+          x: 1460,
+          y: 360,
         }),
         data: { value: 123 },
       },
