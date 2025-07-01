@@ -1,5 +1,5 @@
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import { inject } from '@vercel/analytics';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 import { ReactFlowProvider } from '@xyflow/react';
 import { NuqsAdapter } from 'nuqs/adapters/react-router/v7';
 import React from 'react';
@@ -28,6 +28,10 @@ const router = createBrowserRouter([
   },
 ]);
 
+injectSpeedInsights();
+inject();
+
+// biome-ignore lint/style/noNonNullAssertion: react for the win
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <TooltipProvider delayDuration={0}>
@@ -35,7 +39,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <RouterProvider router={router} />
       </NuqsAdapter>
     </TooltipProvider>
-    <Analytics />
-    <SpeedInsights />
   </React.StrictMode>,
 );
