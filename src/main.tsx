@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import { ReactFlowProvider } from '@xyflow/react';
 import { NuqsAdapter } from 'nuqs/adapters/react-router/v7';
 import React from 'react';
@@ -33,5 +34,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <RouterProvider router={router} />
       </NuqsAdapter>
     </TooltipProvider>
+    <Analytics />
   </React.StrictMode>,
 );
