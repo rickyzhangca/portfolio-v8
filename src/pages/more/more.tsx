@@ -300,9 +300,16 @@ const AppleSummarySlides = () => (
     </p>
     <p>
       In response to this demand, I created a collection of Bento summary slides
-      that is accessible on <a>web</a> and Figma. This collection has allowed
-      over 14K designers and 30K visitors to easily access and get inspirations
-      from the slides.
+      that is accessible on{' '}
+      <a
+        href="https://apple-summary-slides.vercel.app/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        web
+      </a>{' '}
+      and Figma. This collection has allowed over 14K designers and 30K visitors
+      to easily access and get inspirations from the slides.
     </p>
     <FigmaCard
       image={logo3}
