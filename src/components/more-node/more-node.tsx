@@ -1,8 +1,8 @@
 import { NodeProps } from '@xyflow/react';
 import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
+import { useEffect, useRef, useState } from 'react';
 import { atoms } from '../../atoms';
-
 import logo0 from '../../pages/more/logo-0.webp';
 import logo1 from '../../pages/more/logo-1.webp';
 import logo2 from '../../pages/more/logo-2.webp';
@@ -13,65 +13,80 @@ import logo6 from '../../pages/more/logo-6.webp';
 import logo7 from '../../pages/more/logo-7.webp';
 import logo8 from '../../pages/more/logo-8.webp';
 import logo9 from '../../pages/more/logo-9.webp';
+import { tw } from '../../utils/tw';
+
+const projects1: string[] = [logo0, logo1, logo2, logo3, logo4];
+
+const projects2: string[] = [logo5, logo6, logo7, logo8, logo9];
 
 export const MoreNode = ({ id }: NodeProps) => {
   const [, setDisplayContent] = useAtom(atoms.displayContent);
   const [currentDraggingNode] = useAtom(atoms.currentDraggingNode);
   const isDragging = currentDraggingNode === id;
 
+  const [isHovered, setIsHovered] = useState(false);
+  const nodeRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const reactFlowNode = nodeRef.current?.closest(
+      '.react-flow__node-MoreNode',
+    ) as HTMLElement | null;
+    if (!reactFlowNode) return;
+
+    reactFlowNode.style.zIndex = isHovered ? '1001' : '0';
+  }, [isHovered]);
+
   return (
     <motion.div
+      ref={nodeRef}
       whileHover={{
         scale: isDragging ? 1.15 : 1,
       }}
-      className="group relative size-52"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={tw(
+        'relative transition-all',
+        isHovered
+          ? 'h-80 w-[536px] overflow-hidden rounded-2xl border bg-white shadow-xl'
+          : 'h-40 w-[340px] shadow-none',
+      )}
     >
       <button
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-sm font-medium text-gray-900 underline opacity-0 outline-hidden transition group-hover:opacity-100 hover:cursor-pointer"
+        type="button"
+        className={tw(
+          'hover:bg-muted absolute inset-x-0 top-0 border-b p-4 text-center font-medium text-gray-900 outline-hidden transition hover:cursor-pointer',
+          isHovered ? 'opacity-100' : 'opacity-0',
+        )}
         onClick={() => setDisplayContent('more')}
       >
         Fun projects →
       </button>
-      <img
-        src={logo0}
-        className="absolute size-20 -rotate-6 rounded-[14px] shadow-xs transition group-hover:-translate-x-4 group-hover:-translate-y-8 group-hover:shadow-sm"
-      />
-      <img
-        src={logo1}
-        className="absolute size-20 -translate-x-12 translate-y-8 rounded-[14px] shadow-xs transition group-hover:-translate-x-16 group-hover:translate-y-10 group-hover:shadow-sm"
-      />
-      <img
-        src={logo2}
-        className="absolute size-20 translate-x-16 translate-y-32 rotate-6 rounded-[14px] shadow-xs transition group-hover:translate-y-40 group-hover:shadow-sm"
-      />
-      <img
-        src={logo3}
-        className="absolute size-20 -translate-x-12 translate-y-18 -rotate-12 rounded-[14px] shadow-xs transition group-hover:-translate-x-12 group-hover:translate-y-28 group-hover:shadow-sm"
-      />
-      <img
-        src={logo4}
-        className="absolute size-20 translate-x-20 translate-y-4 rotate-6 rounded-[14px] shadow-xs transition group-hover:translate-x-28 group-hover:-translate-y-2 group-hover:shadow-sm"
-      />
-      <img
-        src={logo5}
-        className="absolute size-20 translate-x-28 translate-y-12 rounded-[14px] shadow-xs transition group-hover:translate-x-44 group-hover:translate-y-16 group-hover:shadow-sm"
-      />
-      <img
-        src={logo6}
-        className="absolute size-20 translate-x-32 translate-y-24 rotate-12 rounded-[14px] shadow-xs transition group-hover:translate-x-40 group-hover:translate-y-28 group-hover:shadow-sm"
-      />
-      <img
-        src={logo7}
-        className="absolute size-20 -translate-x-8 translate-y-28 rotate-12 rounded-[14px] shadow-xs transition group-hover:-translate-x-8 group-hover:translate-y-44 group-hover:shadow-sm"
-      />
-      <img
-        src={logo8}
-        className="absolute size-20 translate-x-32 translate-y-36 -rotate-12 rounded-[14px] shadow-xs transition group-hover:translate-x-36 group-hover:translate-y-48 group-hover:shadow-sm"
-      />
-      <img
-        src={logo9}
-        className="absolute size-20 translate-x-6 translate-y-36 -rotate-12 rounded-[14px] shadow-xs transition group-hover:translate-x-4 group-hover:translate-y-48 group-hover:shadow-sm"
-      />
+      {projects1.map((project, index) => {
+        return (
+          <img
+            key={project}
+            src={project}
+            alt={project}
+            className="absolute size-20 rounded-[14px] shadow-sm transition"
+            style={{
+              transform: `translateX(${isHovered ? index * 96 + 36 : index * 64}px) translateY(${isHovered ? 90 : 0}px) rotate(8deg)`,
+            }}
+          />
+        );
+      })}
+      {projects2.map((project, index) => {
+        return (
+          <img
+            key={project}
+            src={project}
+            alt={project}
+            className="absolute size-20 rounded-[14px] shadow-sm transition"
+            style={{
+              transform: `translateX(${isHovered ? index * 96 + 36 : index * 64}px) translateY(${isHovered ? 200 : 80}px) rotate(-6deg)`,
+            }}
+          />
+        );
+      })}
     </motion.div>
   );
 };
