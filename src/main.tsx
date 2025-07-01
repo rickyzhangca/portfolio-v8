@@ -1,4 +1,5 @@
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { ReactFlowProvider } from '@xyflow/react';
 import { NuqsAdapter } from 'nuqs/adapters/react-router/v7';
 import React from 'react';
@@ -35,5 +36,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       </NuqsAdapter>
     </TooltipProvider>
     <Analytics />
+    <SpeedInsights />
   </React.StrictMode>,
 );
