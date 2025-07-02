@@ -605,9 +605,7 @@ export const Swag = () => {
                   'group flex h-full items-center justify-center p-10 transition duration-200',
                   hovered === swag.src
                     ? 'z-10 scale-[140%] opacity-100'
-                    : hovered
-                      ? 'scale-50 opacity-40'
-                      : 'scale-100 opacity-100',
+                    : 'scale-100 opacity-100',
                 )}
               >
                 <Tilt
