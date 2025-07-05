@@ -7,9 +7,9 @@ export const Why = () => {
       <div className="prose w-full max-w-full rounded-2xl bg-white p-3 text-start md:p-8">
         <div className="flex w-full items-center justify-center pt-4">
           <img
-            src={ricky}
             alt="ricky"
-            className="h-96 -rotate-4 rounded-xl shadow-xl"
+            className="-rotate-4 h-96 rounded-xl shadow-xl"
+            src={ricky}
           />
         </div>
         <h2 className="font-semibold text-gray-400">
@@ -35,8 +35,8 @@ export const Why = () => {
           when I read about{' '}
           <a
             href="https://medium.com/google-design/google-maps-cb0326d165f5"
-            target="_blank"
             rel="noopener noreferrer"
+            target="_blank"
           >
             Prototyping a Smoother Map
           </a>

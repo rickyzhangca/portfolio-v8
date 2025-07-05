@@ -71,7 +71,6 @@ import {
   SiVuedotjs,
   SiWebassembly,
 } from '@icons-pack/react-simple-icons';
-import { useControllableState } from '@radix-ui/react-use-controllable-state';
 import {
   transformerNotationDiff,
   transformerNotationErrorLevel,
@@ -79,6 +78,7 @@ import {
   transformerNotationHighlight,
   transformerNotationWordHighlight,
 } from '@shikijs/transformers';
+import { useControllableState } from 'radix-ui/internal';
 import type { HTMLAttributes, ReactNode } from 'react';
 import { createContext, useContext, useEffect, useState } from 'react';
 import {
@@ -178,7 +178,7 @@ const lineNumberClassNames = tw(
   '[&_.line]:before:text-right',
   '[&_.line]:before:text-muted-foreground/50',
   '[&_.line]:before:font-mono',
-  '[&_.line]:before:select-none',
+  '[&_.line]:before:select-none'
 );
 
 const darkModeClassNames = tw(
@@ -190,7 +190,7 @@ const darkModeClassNames = tw(
   'dark:[&_.shiki_span]:!text-[var(--shiki-dark)]',
   'dark:[&_.shiki_span]:![font-style:var(--shiki-dark-font-style)]',
   'dark:[&_.shiki_span]:![font-weight:var(--shiki-dark-font-weight)]',
-  'dark:[&_.shiki_span]:![text-decoration:var(--shiki-dark-text-decoration)]',
+  'dark:[&_.shiki_span]:![text-decoration:var(--shiki-dark-text-decoration)]'
 );
 
 const lineHighlightClassNames = tw(
@@ -201,7 +201,7 @@ const lineHighlightClassNames = tw(
   '[&_.line.highlighted]:after:top-0',
   '[&_.line.highlighted]:after:bottom-0',
   '[&_.line.highlighted]:after:w-0.5',
-  'dark:[&_.line.highlighted]:!bg-blue-500/10',
+  'dark:[&_.line.highlighted]:!bg-blue-500/10'
 );
 
 const lineDiffClassNames = tw(
@@ -215,17 +215,17 @@ const lineDiffClassNames = tw(
   '[&_.line.diff.remove]:bg-rose-50',
   '[&_.line.diff.remove]:after:bg-rose-500',
   'dark:[&_.line.diff.add]:!bg-emerald-500/10',
-  'dark:[&_.line.diff.remove]:!bg-rose-500/10',
+  'dark:[&_.line.diff.remove]:!bg-rose-500/10'
 );
 
 const lineFocusedClassNames = tw(
   '[&_code:has(.focused)_.line]:blur-[2px]',
-  '[&_code:has(.focused)_.line.focused]:blur-none',
+  '[&_code:has(.focused)_.line.focused]:blur-none'
 );
 
 const wordHighlightClassNames = tw(
   '[&_.highlighted-word]:bg-blue-50',
-  'dark:[&_.highlighted-word]:!bg-blue-500/10',
+  'dark:[&_.highlighted-word]:!bg-blue-500/10'
 );
 
 const codeBlockClassName = tw(
@@ -238,13 +238,13 @@ const codeBlockClassName = tw(
   '[&_code]:bg-transparent',
   '[&_.line]:px-4',
   '[&_.line]:w-full',
-  '[&_.line]:relative',
+  '[&_.line]:relative'
 );
 
 const highlight = (
   html: string,
   language?: BundledLanguage,
-  themes?: CodeOptionsMultipleThemes['themes'],
+  themes?: CodeOptionsMultipleThemes['themes']
 ) =>
   codeToHtml(html, {
     lang: language ?? 'typescript',
@@ -328,8 +328,8 @@ export const CodeBlockHeader = ({
 }: CodeBlockHeaderProps) => (
   <div
     className={tw(
-      'bg-secondary flex flex-row items-center border-b p-1',
-      className,
+      'flex flex-row items-center border-b bg-secondary p-1',
+      className
     )}
     {...props}
   />
@@ -374,7 +374,7 @@ export const CodeBlockFilename = ({
   const { value: activeValue } = useContext(CodeBlockContext);
   const defaultIcon = Object.entries(filenameIconMap).find(([pattern]) => {
     const regex = new RegExp(
-      `^${pattern.replace(/\\/g, '\\\\').replace(/\./g, '\\.').replace(/\*/g, '.*')}$`,
+      `^${pattern.replace(/\\/g, '\\\\').replace(/\./g, '\\.').replace(/\*/g, '.*')}$`
     );
     return regex.test(children as string);
   })?.[1];
@@ -386,7 +386,7 @@ export const CodeBlockFilename = ({
 
   return (
     <div
-      className="bg-secondary text-muted-foreground flex items-center gap-2 px-4 py-1.5 text-xs"
+      className="flex items-center gap-2 bg-secondary px-4 py-1.5 text-muted-foreground text-xs"
       {...props}
     >
       {Icon && <Icon className="h-4 w-4 shrink-0" />}
@@ -405,7 +405,8 @@ const CodeBlockFallback = ({ children, ...props }: CodeBlockFallbackProps) => (
           ?.toString()
           .split('\n')
           .map((line, i) => (
-            <span className="line" key={i}>
+            // biome-ignore lint/suspicious/noArrayIndexKey: unique
+            <span className="line" key={`code-block-${i}`}>
               {line}
             </span>
           ))}
@@ -455,7 +456,7 @@ export const CodeBlockItem = ({
         wordHighlightClassNames,
         darkModeClassNames,
         lineNumbers && lineNumberClassNames,
-        className,
+        className
       )}
       {...props}
     >

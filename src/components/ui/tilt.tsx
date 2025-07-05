@@ -42,20 +42,22 @@ export function Tilt({
     [-0.5, 0.5],
     isReverse
       ? [rotationFactor, -rotationFactor]
-      : [-rotationFactor, rotationFactor],
+      : [-rotationFactor, rotationFactor]
   );
   const rotateY = useTransform(
     xSpring,
     [-0.5, 0.5],
     isReverse
       ? [-rotationFactor, rotationFactor]
-      : [rotationFactor, -rotationFactor],
+      : [rotationFactor, -rotationFactor]
   );
 
   const transform = useMotionTemplate`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!ref.current) return;
+    if (!ref.current) {
+      return;
+    }
 
     const rect = ref.current.getBoundingClientRect();
     const width = rect.width;
@@ -77,16 +79,16 @@ export function Tilt({
 
   return (
     <motion.div
-      ref={ref}
       className={className}
+      onMouseLeave={handleMouseLeave}
+      onMouseMove={handleMouseMove}
+      ref={ref}
       style={{
         transformStyle: 'preserve-3d',
         overflow: 'visible',
         ...style,
         transform,
       }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
     >
       {children}
     </motion.div>

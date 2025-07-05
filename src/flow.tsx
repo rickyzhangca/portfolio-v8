@@ -1,4 +1,3 @@
-import * as Portal from '@radix-ui/react-portal';
 import {
   addEdge,
   applyNodeChanges,
@@ -12,6 +11,7 @@ import {
   useViewport,
   type Viewport,
 } from '@xyflow/react';
+import { Portal } from 'radix-ui';
 import '@xyflow/react/dist/base.css';
 
 import { ArrowUUpLeftIcon } from '@phosphor-icons/react';
@@ -37,19 +37,19 @@ import { WSNode } from './components/ws-node/ws-node';
 import { Contents } from './pages';
 
 const nodeTypes = {
-  MemojiNode: MemojiNode,
-  EmailNode: EmailNode,
-  LinkedInNode: LinkedInNode,
-  RBCNode: RBCNode,
-  MosaicNode: MosaicNode,
-  MintlifyNode: MintlifyNode,
-  WSNode: WSNode,
-  TwitterNode: TwitterNode,
-  ResumeNode: ResumeNode,
-  NoteNode: NoteNode,
-  MoreNode: MoreNode,
-  FunNode: FunNode,
-  SwagNode: SwagNode,
+  MemojiNode,
+  EmailNode,
+  LinkedInNode,
+  RBCNode,
+  MosaicNode,
+  MintlifyNode,
+  WSNode,
+  TwitterNode,
+  ResumeNode,
+  NoteNode,
+  MoreNode,
+  FunNode,
+  SwagNode,
 };
 
 const defaultViewport: Viewport = { x: 0, y: 0, zoom: 0.9 };
@@ -93,11 +93,11 @@ export const Flow = () => {
   const onNodesChange = useCallback(
     (changes: NodeChange[]) =>
       setNodes((nds) => applyNodeChanges(changes, nds)),
-    [],
+    []
   );
   const onConnect = useCallback(
     (connection: Connection) => setEdges((eds) => addEdge(connection, eds)),
-    [],
+    []
   );
 
   const [, setCurrentDraggingNode] = useAtom(atoms.currentDraggingNode);
@@ -226,30 +226,32 @@ export const Flow = () => {
   }, [setViewport, resetNodes]);
 
   useEffect(() => {
-    if (nodes.length > 0) return;
+    if (nodes.length > 0) {
+      return;
+    }
     resetNodes();
   }, [nodes.length, resetNodes]);
 
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
       <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        onNodesChange={onNodesChange}
-        onConnect={onConnect}
-        nodeTypes={nodeTypes}
         defaultViewport={defaultViewport}
-        proOptions={{ hideAttribution: true }}
+        edges={edges}
+        nodes={nodes}
+        nodeTypes={nodeTypes}
+        onConnect={onConnect}
         onNodeDragStart={(_, node) => setCurrentDraggingNode(node.id)}
         onNodeDragStop={() => setCurrentDraggingNode('')}
-        zoomOnDoubleClick={false}
+        onNodesChange={onNodesChange}
         panOnScroll
+        proOptions={{ hideAttribution: true }}
+        zoomOnDoubleClick={false}
       >
         <Background
           color="#E6E6E6"
           gap={20}
-          variant={BackgroundVariant.Dots}
           size={2.5}
+          variant={BackgroundVariant.Dots}
         />
       </ReactFlow>
       <AnimatePresence>
@@ -257,12 +259,12 @@ export const Flow = () => {
           viewport.x !== defaultViewport.x ||
           viewport.y !== defaultViewport.y) && (
           <motion.button
-            initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.1 }}
-            onClick={resetFlow}
             className="fixed right-5 bottom-5 z-10 flex rounded-full bg-gray-900 p-3 text-white/80 transition hover:bg-gray-700 hover:text-white hover:shadow-lg"
+            exit={{ opacity: 0 }}
+            initial={{ opacity: 0 }}
+            onClick={resetFlow}
+            transition={{ duration: 0.1 }}
           >
             <ArrowUUpLeftIcon weight="bold" />
           </motion.button>
@@ -273,10 +275,10 @@ export const Flow = () => {
           <Portal.Root onClick={() => setDisplayContent(null)}>
             {Contents[displayContent]}
             <motion.div
-              className="fixed inset-0 z-10 bg-black/10 backdrop-blur-lg"
-              initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
+              className="fixed inset-0 z-10 bg-black/10 backdrop-blur-lg"
               exit={{ opacity: 0 }}
+              initial={{ opacity: 0 }}
               transition={{
                 duration: 0.2,
                 ease: 'easeInOut',

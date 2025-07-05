@@ -1,5 +1,5 @@
 import { atom } from 'jotai';
-import { Contents } from './pages';
+import type { Contents } from './pages';
 
 const currentDraggingNode = atom<string>('');
 const displayContent = atom<keyof typeof Contents | null>(null);

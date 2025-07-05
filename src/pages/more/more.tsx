@@ -1,10 +1,10 @@
 import ReactPlayer from 'react-player';
 import { Tweet } from 'react-tweet';
 import { FigmaCard } from '../../components/figma-card/figma-card';
-import { HeaderCard } from '../../components/header-card/header-card';
+import { HeaderCard } from '../../components/header-card';
 import { Image } from '../../components/image';
 import { PageLayout } from '../../components/page-layout';
-import { ProjectCard } from '../../components/project-card/project-card';
+import { ProjectCard } from '../../components/project-card';
 import {
   type BundledLanguage,
   CodeBlock,
@@ -35,26 +35,26 @@ import logo8 from './logo-8.webp';
 import logo9 from './logo-9.webp';
 import octiconsFigma from './octicons-figma.webp';
 import octiconsWeb from './octicons-web.webp';
-import paopaoLogo from './paopao-logo.svg';
 import paopao from './paopao.webp';
+import paopaoLogo from './paopao-logo.svg';
 import spellbook from './spellbook.webp';
 import summarySlides from './summary-slides.webp';
 import svgoui from './svgoui.webp';
 import twitterQuote from './twitter-quote.webp';
 
 const KiboUI = () => (
-  <ProjectCard logo={logo8} title="Kibo UI" status="Active">
+  <ProjectCard logo={logo8} status="Active" title="Kibo UI">
     <p>
       I love design engineering, design systems and building components. So I'm
       enjoying creating components for the open source component library{' '}
-      <a href="https://www.kibo-ui.com/" target="_blank" rel="noreferrer">
+      <a href="https://www.kibo-ui.com/" rel="noreferrer" target="_blank">
         Kibo UI
       </a>{' '}
       created by Vercel's engineer{' '}
       <a
         href="https://twitter.com/haydenbleasel"
-        target="_blank"
         rel="noreferrer"
+        target="_blank"
       >
         Hayden Bleasel
       </a>
@@ -63,28 +63,28 @@ const KiboUI = () => (
     <div className="not-prose relative overflow-hidden rounded-xl border border-gray-200">
       <div className="absolute h-full w-full border border-white" />
       <ReactPlayer
-        playing
+        controls
+        height="auto"
         loop
         muted
+        playing
         src={kiboUI}
-        controls
         width="100%"
-        height="auto"
       />
     </div>
   </ProjectCard>
 );
 
 const SVGOUI = () => (
-  <ProjectCard logo={logo7} image={svgoui} title="SVGOUI" status="Maintaining">
+  <ProjectCard image={svgoui} logo={logo7} status="Maintaining" title="SVGOUI">
     <p>
       When building the credit card component for Kibo UI, I had to deal with a
       number of credit card network icon SVGs. So I build a UI for SVGO to
       optimize them so I can publish them to{' '}
       <a
         href="https://www.npmjs.com/package/react-card-network-icons"
-        target="_blank"
         rel="noreferrer"
+        target="_blank"
       >
         <code className="rounded-lg bg-gray-200 p-1.5">
           react-card-network-icons
@@ -94,14 +94,14 @@ const SVGOUI = () => (
     </p>
     <p>
       SVGOUI is a UI for SVG optimizer tool{' '}
-      <a href="https://github.com/svg/svgo" target="_blank" rel="noreferrer">
+      <a href="https://github.com/svg/svgo" rel="noreferrer" target="_blank">
         SVGO
       </a>
       . Comparing to the predecessor{' '}
       <a
         href="https://github.com/interlace-app/svgui"
-        target="_blank"
         rel="noreferrer"
+        target="_blank"
       >
         SVGOMG
       </a>
@@ -110,7 +110,7 @@ const SVGOUI = () => (
     </p>
     <p>
       You can try it out{' '}
-      <a href="https://svgoui.pages.dev/" target="_blank" rel="noreferrer">
+      <a href="https://svgoui.pages.dev/" rel="noreferrer" target="_blank">
         here
       </a>
       .
@@ -119,7 +119,7 @@ const SVGOUI = () => (
 );
 
 const Spellbook = () => (
-  <ProjectCard logo={logo4} image={spellbook} title="Spellbook" status="Active">
+  <ProjectCard image={spellbook} logo={logo4} status="Active" title="Spellbook">
     <p>
       ChatGPT 4o's image generation capability had a huge leap forward in early
       2025. It is better than ever on understanding prompts and adhering to
@@ -127,7 +127,7 @@ const Spellbook = () => (
     </p>
     <p>
       So I created{' '}
-      <a href="https://spellbook.space" target="_blank" rel="noreferrer">
+      <a href="https://spellbook.space" rel="noreferrer" target="_blank">
         Spellbook
       </a>
       . A platform for people to share and grab prompts that really work -
@@ -139,16 +139,16 @@ const Spellbook = () => (
 
 const Fprints = () => (
   <ProjectCard
-    logo={logo1}
     image={fprints}
-    title="Fprints"
+    logo={logo1}
     status="Maintaining"
+    title="Fprints"
   >
     <p>
       <a
         href="https://store.steampowered.com/app/427520/Factorio/"
-        target="_blank"
         rel="noreferrer"
+        target="_blank"
       >
         Factorio
       </a>{' '}
@@ -158,7 +158,7 @@ const Fprints = () => (
     </p>
     <p>
       I created{' '}
-      <a href="https://fprints.xyz" target="_blank" rel="noreferrer">
+      <a href="https://fprints.xyz" rel="noreferrer" target="_blank">
         Fprints
       </a>
       . A platform where players can publish their blueprints and find
@@ -170,10 +170,10 @@ const Fprints = () => (
 
 const FigKiwiToolbox = () => (
   <ProjectCard
-    logo={logo9}
     image={figKiwi}
-    title="fig-kiwi-toolbox"
+    logo={logo9}
     status="Archived"
+    title="fig-kiwi-toolbox"
   >
     <p>
       In 2023, I had a vision of creating a tool that would help both designers
@@ -186,8 +186,8 @@ const FigKiwiToolbox = () => (
       And{' '}
       <a
         href="https://github.com/interlace-app/fig-kiwi-toolbox"
-        target="_blank"
         rel="noreferrer"
+        target="_blank"
       >
         fig-kiwi-toolbox
       </a>{' '}
@@ -199,9 +199,9 @@ const FigKiwiToolbox = () => (
 );
 
 const MirrorActualSize = () => (
-  <ProjectCard logo={logo6} title="Mirror Actual Size" status="Maintaining">
+  <ProjectCard logo={logo6} status="Maintaining" title="Mirror Actual Size">
     <p>
-      <a href="https://www.figma.com/mirror" target="_blank" rel="noreferrer">
+      <a href="https://www.figma.com/mirror" rel="noreferrer" target="_blank">
         Figma Mirror
       </a>{' '}
       is a useful tool for previewing and interacting with designs, but it has a
@@ -220,11 +220,11 @@ const MirrorActualSize = () => (
       rather than being scaled to fill the screen.
     </p>
     <FigmaCard
+      count="3.8k"
+      description="A Figma plugin that ensures content is displayed at its actual size when mirrored to a device."
+      href="https://www.figma.com/community/plugin/989887108667938748/mirror-actual-size"
       image={logo6}
       title="Mirror Actual Size"
-      description="A Figma plugin that ensures content is displayed at its actual size when mirrored to a device."
-      count="3.8k"
-      href="https://www.figma.com/community/plugin/989887108667938748/mirror-actual-size"
     />
     <p>
       The Mirror Actual Size plugin has become an essential tool for us at
@@ -234,18 +234,25 @@ const MirrorActualSize = () => (
       tried it.
     </p>
     <div className="grid grid-cols-2 rounded-2xl border border-gray-200">
-      <img src={afterMirror1} className="not-prose" />
-      <img src={afterMirror2} className="not-prose" />
-      <img src={afterMirror3} className="not-prose col-span-2" />
+      {/** biome-ignore lint/performance/noImgElement: just simple img */}
+      <img alt="mirror example 1" className="not-prose" src={afterMirror1} />
+      {/** biome-ignore lint/performance/noImgElement: just simple img */}
+      <img alt="mirror example 2" className="not-prose" src={afterMirror2} />
+      {/** biome-ignore lint/performance/noImgElement: just simple img */}
+      <img
+        alt="mirror example 3"
+        className="not-prose col-span-2"
+        src={afterMirror3}
+      />
     </div>
   </ProjectCard>
 );
 
 const Slides = () => (
-  <ProjectCard logo={logo5} title="Slides" status="Archived">
+  <ProjectCard logo={logo5} status="Archived" title="Slides">
     <p>
       Many designers{' '}
-      <a href="https://www.figma.com/mirror" target="_blank" rel="noreferrer">
+      <a href="https://www.figma.com/mirror" rel="noreferrer" target="_blank">
         create slide decks with Figma
       </a>{' '}
       , including myself. However, one limitation of Figma is that it does not
@@ -255,19 +262,19 @@ const Slides = () => (
       when slides are re-ordered, it is easy to forget to update the
       interactions, which can lead to problems when presenting.
     </p>
-    <Image src={twitterQuote} className="h-64" />
+    <Image className="h-64" src={twitterQuote} />
     <p>
       To make Figma a more practical presentation solution, I created the Slides
       plugin. This plugin automatically adds or updates the forward and backward
       interactions to the frames that the user selects.
     </p>
     <FigmaCard
-      image={logo5}
-      title="Slides"
+      count="13.0k"
       description="Add controls (interactive, of course) to the frames so you can
                 use them as slides."
-      count="13.0k"
       href="https://www.figma.com/community/plugin/1050766825375940133/slides"
+      image={logo5}
+      title="Slides"
     />
     <p>
       This saves time and ensures that the interactions are always up-to-date,
@@ -278,20 +285,20 @@ const Slides = () => (
     </p>
     <div className="not-prose overflow-hidden rounded-xl border border-gray-200 bg-white">
       <ReactPlayer
-        playing
+        height="100%"
         loop
         muted
-        src={demo}
         playbackRate={1.6}
+        playing
+        src={demo}
         width="100%"
-        height="100%"
       />
     </div>
   </ProjectCard>
 );
 
 const AppleSummarySlides = () => (
-  <ProjectCard logo={logo3} title="Apple summary slides" status="Active">
+  <ProjectCard logo={logo3} status="Active" title="Apple summary slides">
     <p>
       In September 2019, Apple introduced a new visual language called Bento for
       use in their events, which is characterized by a series of well-organized
@@ -303,8 +310,8 @@ const AppleSummarySlides = () => (
       that is accessible on{' '}
       <a
         href="https://apple-summary-slides.vercel.app/"
-        target="_blank"
         rel="noreferrer"
+        target="_blank"
       >
         web
       </a>{' '}
@@ -312,32 +319,31 @@ const AppleSummarySlides = () => (
       to easily access and get inspirations from the slides.
     </p>
     <FigmaCard
-      image={logo3}
-      title="Apple summary slides"
+      count="14.6k"
       description="This file collects every single summary slide Apple used in
                 their events."
-      count="14.6k"
-      label="View in Community"
       href="https://www.figma.com/community/file/1150817983915754582/all-apple-event-summary-slides-2019-2024"
+      image={logo3}
+      label="View in Community"
+      title="Apple summary slides"
     />
+    {/** biome-ignore lint/performance/noImgElement: just simple img */}
     <img
-      src={summarySlides}
+      alt="summary slides"
       className="mt-4 rounded-xl border border-gray-200"
+      src={summarySlides}
     />
     <p>And the community has loved it!</p>
     <div className="not-prose my-8 flex justify-center gap-3 rounded-xl border border-gray-200 bg-gray-100 px-4">
-      {/** biome-ignore lint/nursery/useUniqueElementIds: is unique twitter id */}
       <Tweet id="1606746044867530753" />
-      {/** biome-ignore lint/nursery/useUniqueElementIds: is unique twitter id */}
       <Tweet id="1607124694288986112" />
-      {/** biome-ignore lint/nursery/useUniqueElementIds: is unique twitter id */}
       <Tweet id="1610783724672618496" />
     </div>
   </ProjectCard>
 );
 
 const OcticonsExtended = () => (
-  <ProjectCard logo={logo0} title="Octicons Extended" status="Archived">
+  <ProjectCard logo={logo0} status="Archived" title="Octicons Extended">
     <p>
       As a side project, I created octicons-extended, a growing collection of
       icons that allows designers and developers to bring more variety to their
@@ -345,7 +351,7 @@ const OcticonsExtended = () => (
     </p>
     <p>
       GitHub&apos;s original octicons inspired our{' '}
-      <a href="https://old.rickyzhang.me/" target="_blank" rel="noreferrer">
+      <a href="https://old.rickyzhang.me/" rel="noreferrer" target="_blank">
         icon system refresh
       </a>{' '}
       at Mosaic, but we found that it has limited coverage because it is
@@ -358,14 +364,14 @@ const OcticonsExtended = () => (
       it accessible to a wide audience, I have made it available in the Figma
       community, where it is organized and easy to use.
     </p>
-    <Image src={octiconsFigma} autoHeight />
+    <Image autoHeight src={octiconsFigma} />
     <p>
       I have also created a Node and React build, as well as a website that
       allows users to quickly access the full iconset and copy SVG files. By
       providing these tools, I hope to make octicons-extended a valuable
       resource for designers and developers alike.
     </p>
-    <Image src={octiconsWeb} autoHeight />
+    <Image autoHeight src={octiconsWeb} />
     <p>
       To reduce the friction of switching from octicons to octicons-extended,
       octicons-extended fully includes the original octicons and two packages
@@ -410,10 +416,10 @@ import { ZapIcon } from 'octicons-extended-react';`,
 
 const Paopao = () => (
   <ProjectCard
-    logo={logo2}
-    title="Paopao Stickers"
     image={paopao}
+    logo={logo2}
     status="Maintaining"
+    title="Paopao Stickers"
   >
     <p>
       The Paopao stickers are a popular and well-known set of stickers in
@@ -426,19 +432,19 @@ const Paopao = () => (
       stickers in the Figma Community or{' '}
       <a
         href="https://t.me/addstickers/tieba_paopao/"
-        target="_blank"
         rel="noreferrer"
+        target="_blank"
       >
         add the sticker set to Telegram
       </a>
     </p>
     <FigmaCard
-      title="Paopao Stickers"
-      description="A collection of 50 vectorized Paopao stickers"
-      label="View in Community"
-      image={paopaoLogo}
       count="585"
+      description="A collection of 50 vectorized Paopao stickers"
       href="https://www.figma.com/community/file/1070232689050503920"
+      image={paopaoLogo}
+      label="View in Community"
+      title="Paopao Stickers"
     />
   </ProjectCard>
 );
@@ -447,8 +453,8 @@ export const More = () => {
   return (
     <PageLayout>
       <HeaderCard
-        title="My fun projects"
         subtitle="I spent most of my free time on side projects that speak for my passion. It's a way to build without constraints from work, and a freedom to explore latest ideas and techs."
+        title="My fun projects"
       />
       <div className="flex flex-col gap-2">
         <KiboUI />

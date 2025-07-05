@@ -1,5 +1,5 @@
-import { HeaderCard } from '../../components/header-card/header-card';
-import { HighlightCard } from '../../components/highlight-card/highlight-card';
+import { HeaderCard } from '../../components/header-card';
+import { HighlightCard } from '../../components/highlight-card';
 import { PageLayout } from '../../components/page-layout';
 import auth from './auth.webp';
 import chat from './chat.webp';
@@ -13,8 +13,8 @@ export const Mintlify = () => {
   return (
     <PageLayout>
       <HeaderCard
-        title="Mintlify"
         subtitle="Mintlify (YC W22) defines the modern standard for documentation. I was lucky to have worked with the great and tight-knit team to ship many new UIs as a design engineer."
+        title="Mintlify"
       />
       <div className="grid gap-2 md:grid-cols-2">
         <HighlightCard

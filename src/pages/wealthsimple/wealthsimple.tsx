@@ -1,5 +1,5 @@
-import { HeaderCard } from '../../components/header-card/header-card';
-import { HighlightCard } from '../../components/highlight-card/highlight-card';
+import { HeaderCard } from '../../components/header-card';
+import { HighlightCard } from '../../components/highlight-card';
 import { PageLayout } from '../../components/page-layout';
 import darkMode from './dark-mode.webp';
 import homeGradients from './home-gradients.webp';
@@ -10,8 +10,8 @@ export const Wealthsimple = () => {
   return (
     <PageLayout>
       <HeaderCard
-        title="Wealthsimple, Design System"
         subtitle="Building something people love to use everyday."
+        title="Wealthsimple, Design System"
       />
       <div className="grid gap-2 md:grid-cols-2">
         <HighlightCard image={homeGradients} title="Home gradients" />

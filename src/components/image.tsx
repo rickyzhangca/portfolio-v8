@@ -10,29 +10,32 @@ type ImageProps = {
 export const Image = ({ src, href, className, autoHeight }: ImageProps) => {
   if (href) {
     return (
-      <img
-        onClick={() => {
-          window.open(href, '_blank');
-        }}
-        src={src}
-        className={tw(
-          'not-prose w-full cursor-pointer rounded-xl border border-gray-200 bg-gray-700 object-contain',
-          autoHeight ? 'h-auto' : 'h-96',
-          className,
-        )}
-      />
+      <a href={href} target="_blank">
+        {/** biome-ignore lint/performance/noImgElement: just simple img */}
+        <img
+          alt="missing alt"
+          className={tw(
+            'not-prose w-full cursor-pointer rounded-xl border border-gray-200 bg-gray-700 object-contain',
+            autoHeight ? 'h-auto' : 'h-96',
+            className
+          )}
+          src={src}
+        />
+      </a>
     );
   }
 
   return (
     <div className={tw('not-prose w-full')}>
+      {/** biome-ignore lint/performance/noImgElement: just simple img */}
       <img
-        src={src}
+        alt="missing alt"
         className={tw(
           'm-auto rounded-xl border border-gray-200 object-contain',
           autoHeight ? 'h-auto' : 'h-96',
-          className,
+          className
         )}
+        src={src}
       />
     </div>
   );

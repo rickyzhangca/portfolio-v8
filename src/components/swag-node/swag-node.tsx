@@ -10,30 +10,34 @@ export const SwagNode = () => {
 
   return (
     <div className="group flex">
+      {/** biome-ignore lint/performance/noImgElement: just simple img */}
       <img
-        src={swag22}
         alt="swag22"
         className="h-24 transition group-hover:scale-125"
+        src={swag22}
       />
+      {/** biome-ignore lint/performance/noImgElement: just simple img */}
       <img
-        src={swag33}
         alt="swag33"
         className="-ml-4 h-24 transition group-hover:scale-125"
+        src={swag33}
       />
+      {/** biome-ignore lint/performance/noImgElement: just simple img */}
       <img
-        src={swag86}
         alt="swag86"
         className="-ml-4 h-24 transition group-hover:scale-125"
+        src={swag86}
       />
+      {/** biome-ignore lint/performance/noImgElement: just simple img */}
       <img
-        src={swag17}
         alt="swag17"
         className="-ml-4 h-24 transition group-hover:scale-125"
+        src={swag17}
       />
       <button
-        type="button"
+        className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 w-56 cursor-pointer rounded-2xl bg-white px-4 py-3 font-medium opacity-0 shadow transition hover:shadow-lg active:bg-muted group-hover:opacity-100"
         onClick={() => setDisplayContent('swag')}
-        className="active:bg-muted absolute top-1/2 left-1/2 w-56 -translate-x-1/2 -translate-y-1/2 cursor-pointer rounded-2xl bg-white px-4 py-3 font-medium opacity-0 shadow transition group-hover:opacity-100 hover:shadow-lg"
+        type="button"
       >
         View my swag collection
       </button>

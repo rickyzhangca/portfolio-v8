@@ -1,6 +1,6 @@
 import { shuffle } from 'fast-shuffle';
 import { useState } from 'react';
-import { HeaderCard } from '../../components/header-card/header-card';
+import { HeaderCard } from '../../components/header-card';
 import { PageLayout } from '../../components/page-layout';
 import { Tilt } from '../../components/ui/tilt';
 import { tw } from '../../utils/tw';
@@ -578,16 +578,16 @@ export const Swag = () => {
 
   return (
     <PageLayout>
-      <HeaderCard title="My swag collection" subtitle="Huge fan of swags!" />
+      <HeaderCard subtitle="Huge fan of swags!" title="My swag collection" />
       <div className="grid grid-cols-2 items-center gap-px overflow-hidden rounded-3xl border border-gray-200 bg-white sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {shuffledSwags.map((swag) => {
           return (
             <div
-              key={swag.src}
               className={tw(
-                'outline-border to-muted flex h-full w-full flex-col from-white from-20% outline transition',
-                hovered === swag.src && 'bg-gradient-to-b',
+                'flex h-full w-full flex-col from-20% from-white to-muted outline outline-border transition',
+                hovered === swag.src && 'bg-gradient-to-b'
               )}
+              key={swag.src}
             >
               <div className="flex min-h-[98px] flex-col items-center justify-center gap-2 border-b bg-white px-2">
                 <div className="flex min-h-10 items-center">
@@ -598,29 +598,31 @@ export const Swag = () => {
                 )}
               </div>
               {/* biome-ignore lint/a11y/noStaticElementInteractions: just for hovering */}
+              {/* biome-ignore lint/nursery/noNoninteractiveElementInteractions: just for hovering */}
               <div
-                onMouseEnter={() => setHovered(swag.src)}
-                onMouseLeave={() => setHovered(null)}
                 className={tw(
                   'group flex h-full items-center justify-center p-10 transition duration-200',
                   hovered === swag.src
                     ? 'z-10 scale-[140%] opacity-100'
-                    : 'scale-100 opacity-100',
+                    : 'scale-100 opacity-100'
                 )}
+                onMouseEnter={() => setHovered(swag.src)}
+                onMouseLeave={() => setHovered(null)}
               >
                 <Tilt
-                  rotationFactor={60}
                   isReverse
-                  style={{
-                    transformOrigin: 'center center',
-                  }}
+                  rotationFactor={60}
                   springOptions={{
                     stiffness: 26.7,
                     damping: 4.1,
                     mass: 0.2,
                   }}
+                  style={{
+                    transformOrigin: 'center center',
+                  }}
                 >
-                  <img src={swag.src} alt={swag.label} />
+                  {/** biome-ignore lint/performance/noImgElement: just simple img */}
+                  <img alt={swag.label} src={swag.src} />
                 </Tilt>
               </div>
             </div>

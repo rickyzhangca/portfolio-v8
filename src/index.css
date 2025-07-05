@@ -2,10 +2,14 @@
 
 @import 'tailwindcss';
 @import 'tw-animate-css';
+
+/* biome-ignore lint/nursery/noUnknownAtRule: tailwindcss plugin */
 @plugin "@tailwindcss/typography";
 
+/* biome-ignore lint/nursery/noUnknownAtRule: tailwindcss custom variant */
 @custom-variant dark (&:is(.dark *));
 
+/* biome-ignore lint/nursery/noUnknownAtRule: tailwindcss theme */
 @theme {
   --font-fredericka: 'Fredericka the Great', Inter, sans-serif;
 }
@@ -75,6 +79,7 @@
 /*
   ---break---
 */
+/* biome-ignore lint/nursery/noUnknownAtRule: tailwindcss theme */
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -153,9 +158,11 @@
 */
 @layer base {
   * {
+    /* biome-ignore lint/nursery/noUnknownAtRule: tailwindcss apply */
     @apply border-border outline-ring/50;
   }
   body {
+    /* biome-ignore lint/nursery/noUnknownAtRule: tailwindcss apply */
     @apply bg-background text-foreground;
   }
 }

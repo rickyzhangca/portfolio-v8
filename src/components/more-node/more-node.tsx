@@ -1,4 +1,4 @@
-import { NodeProps } from '@xyflow/react';
+import type { NodeProps } from '@xyflow/react';
 import { motion } from 'framer-motion';
 import { useAtom } from 'jotai';
 import { useEffect, useRef, useState } from 'react';
@@ -29,45 +29,49 @@ export const MoreNode = ({ id }: NodeProps) => {
 
   useEffect(() => {
     const reactFlowNode = nodeRef.current?.closest(
-      '.react-flow__node-MoreNode',
+      '.react-flow__node-MoreNode'
     ) as HTMLElement | null;
-    if (!reactFlowNode) return;
+
+    if (!reactFlowNode) {
+      return;
+    }
 
     reactFlowNode.style.zIndex = isHovered ? '1001' : '0';
   }, [isHovered]);
 
   return (
     <motion.div
-      ref={nodeRef}
-      whileHover={{
-        scale: isDragging ? 1.15 : 1,
-      }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       className={tw(
         'relative transition-all',
         isHovered
           ? 'h-80 w-[536px] overflow-hidden rounded-2xl border bg-white shadow-xl'
-          : 'h-40 w-[340px] shadow-none',
+          : 'h-40 w-[340px] shadow-none'
       )}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      ref={nodeRef}
+      whileHover={{
+        scale: isDragging ? 1.15 : 1,
+      }}
     >
       <button
-        type="button"
         className={tw(
-          'hover:bg-muted absolute inset-x-0 top-0 border-b p-4 text-center font-medium text-gray-900 outline-hidden transition hover:cursor-pointer',
-          isHovered ? 'opacity-100' : 'opacity-0',
+          'absolute inset-x-0 top-0 border-b p-4 text-center font-medium text-gray-900 outline-hidden transition hover:cursor-pointer hover:bg-muted',
+          isHovered ? 'opacity-100' : 'opacity-0'
         )}
         onClick={() => setDisplayContent('more')}
+        type="button"
       >
         Fun projects →
       </button>
       {projects1.map((project, index) => {
         return (
+          // biome-ignore lint/performance/noImgElement: just simple img
           <img
-            key={project}
-            src={project}
             alt={project}
             className="absolute size-20 rounded-[14px] shadow-sm transition"
+            key={project}
+            src={project}
             style={{
               transform: `translateX(${isHovered ? index * 96 + 36 : index * 64}px) translateY(${isHovered ? 90 : 0}px) rotate(8deg)`,
             }}
@@ -76,11 +80,12 @@ export const MoreNode = ({ id }: NodeProps) => {
       })}
       {projects2.map((project, index) => {
         return (
+          // biome-ignore lint/performance/noImgElement: just simple img
           <img
-            key={project}
-            src={project}
             alt={project}
             className="absolute size-20 rounded-[14px] shadow-sm transition"
+            key={project}
+            src={project}
             style={{
               transform: `translateX(${isHovered ? index * 96 + 36 : index * 64}px) translateY(${isHovered ? 200 : 80}px) rotate(-6deg)`,
             }}
