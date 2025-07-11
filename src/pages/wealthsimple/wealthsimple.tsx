@@ -5,6 +5,7 @@ import darkMode from './dark-mode.webp';
 import homeGradients from './home-gradients.webp';
 import newProfileLayout from './new-profile-layout.webp';
 import snackbar from './snackbar.webp';
+import swipeable from './swipeable.webp';
 
 export const Wealthsimple = () => {
   return (
@@ -17,6 +18,7 @@ export const Wealthsimple = () => {
         <HighlightCard image={homeGradients} title="Home gradients" />
         <HighlightCard image={newProfileLayout} title="New profile layout" />
         <HighlightCard image={darkMode} title="Web dark mode" />
+        <HighlightCard image={swipeable} title="Swipeable components" />
         <HighlightCard image={snackbar} title="Web snackbar" />
       </div>
     </PageLayout>
