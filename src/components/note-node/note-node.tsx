@@ -36,7 +36,7 @@ export const NoteNode = ({ id }: NodeProps) => {
           onClick={() => setDisplayContent('why')}
           type="button"
         >
-          About Ricky →
+          My writings →
         </button>
       </div>
       {/** biome-ignore lint/performance/noImgElement: just simple img */}

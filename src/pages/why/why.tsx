@@ -29,7 +29,19 @@ export const Why = () => {
         </h2>
       </div>
       <div className="prose w-full max-w-full rounded-2xl bg-white p-3 text-start md:p-8">
-        <h2>Designer who codes</h2>
+        <h2>Design engineer blog</h2>
+        <p>
+          I write about my experiences as a design engineer, sharing insights
+          and lessons learned along the way.
+        </p>
+        <a
+          className="flex w-full items-center justify-center rounded-xl border border-gray-200 px-2 py-6 text-center hover:bg-gray-50"
+          href="https://blog.rickyzhang.me"
+          rel="noreferrer"
+          target="_blank"
+        >
+          blog.rickyzhang.me
+        </a>
         <p>
           The seed of blending design and engineering was planted in the school
           when I read about{' '}
@@ -39,7 +51,7 @@ export const Why = () => {
             target="_blank"
           >
             Prototyping a Smoother Map
-          </a>
+          </a>{' '}
           by a Google's UX engineer. I was fascinated by the idea of being at
           the intersection of design and engineering.
         </p>
