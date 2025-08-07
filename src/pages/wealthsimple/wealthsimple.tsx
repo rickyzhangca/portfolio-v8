@@ -6,6 +6,7 @@ import homeGradients from './home-gradients.webp';
 import newProfileLayout from './new-profile-layout.webp';
 import snackbar from './snackbar.webp';
 import swipeable from './swipeable.webp';
+import webChart from './web-chart.webp';
 
 export const Wealthsimple = () => {
   return (
@@ -15,6 +16,10 @@ export const Wealthsimple = () => {
         title="Wealthsimple, Design System"
       />
       <div className="grid gap-2 md:grid-cols-2">
+        <HighlightCard
+          image={webChart}
+          title="Web chart segments + animations"
+        />
         <HighlightCard image={homeGradients} title="Home gradients" />
         <HighlightCard image={newProfileLayout} title="New profile layout" />
         <HighlightCard image={darkMode} title="Web dark mode" />
