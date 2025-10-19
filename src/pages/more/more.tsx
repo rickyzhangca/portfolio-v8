@@ -1,10 +1,10 @@
-import ReactPlayer from 'react-player';
-import { Tweet } from 'react-tweet';
-import { FigmaCard } from '../../components/figma-card/figma-card';
-import { HeaderCard } from '../../components/header-card';
-import { Image } from '../../components/image';
-import { PageLayout } from '../../components/page-layout';
-import { ProjectCard } from '../../components/project-card';
+import ReactPlayer from "react-player";
+import { Tweet } from "react-tweet";
+import { FigmaCard } from "../../components/figma-card/figma-card";
+import { HeaderCard } from "../../components/header-card";
+import { Image } from "../../components/image";
+import { PageLayout } from "../../components/page-layout";
+import { ProjectCard } from "../../components/project-card";
 import {
   type BundledLanguage,
   CodeBlock,
@@ -14,43 +14,43 @@ import {
   CodeBlockFiles,
   CodeBlockHeader,
   CodeBlockItem,
-} from '../../components/ui/kibo-ui/code-block';
-import afterMirror1 from './after-mirror-1.webp';
-import afterMirror2 from './after-mirror-2.webp';
-import afterMirror3 from './after-mirror-3.webp';
-import beforeMirror from './before-mirror.webp';
-import demo from './demo.webm';
-import figKiwi from './fig-kiwi.webp';
-import fprints from './fprints.webp';
-import kiboUI from './kibo-ui.mov';
-import logo0 from './logo-0.webp';
-import logo1 from './logo-1.webp';
-import logo2 from './logo-2.webp';
-import logo3 from './logo-3.webp';
-import logo4 from './logo-4.webp';
-import logo5 from './logo-5.webp';
-import logo6 from './logo-6.webp';
-import logo7 from './logo-7.webp';
-import logo8 from './logo-8.webp';
-import logo9 from './logo-9.webp';
-import octiconsFigma from './octicons-figma.webp';
-import octiconsWeb from './octicons-web.webp';
-import paopao from './paopao.webp';
-import paopaoLogo from './paopao-logo.svg';
-import spellbook from './spellbook.webp';
-import summarySlides from './summary-slides.webp';
-import svgoui from './svgoui.webp';
-import twitterQuote from './twitter-quote.webp';
+} from "../../components/ui/kibo-ui/code-block";
+import afterMirror1 from "./after-mirror-1.webp";
+import afterMirror2 from "./after-mirror-2.webp";
+import afterMirror3 from "./after-mirror-3.webp";
+import beforeMirror from "./before-mirror.webp";
+import demo from "./demo.webm";
+import figKiwi from "./fig-kiwi.webp";
+import fprints from "./fprints.webp";
+import kiboUI from "./kibo-ui.mov";
+import logo0 from "./logo-0.webp";
+import logo1 from "./logo-1.webp";
+import logo2 from "./logo-2.webp";
+import logo3 from "./logo-3.webp";
+import logo4 from "./logo-4.webp";
+import logo5 from "./logo-5.webp";
+import logo6 from "./logo-6.webp";
+import logo7 from "./logo-7.webp";
+import logo8 from "./logo-8.webp";
+import logo9 from "./logo-9.webp";
+import octiconsFigma from "./octicons-figma.webp";
+import octiconsWeb from "./octicons-web.webp";
+import paopao from "./paopao.webp";
+import paopaoLogo from "./paopao-logo.svg";
+import spellbook from "./spellbook.webp";
+import summarySlides from "./summary-slides.webp";
+import svgoui from "./svgoui.webp";
+import twitterQuote from "./twitter-quote.webp";
 
 const KiboUI = () => (
   <ProjectCard logo={logo8} status="Active" title="Kibo UI">
     <p>
       I love design engineering, design systems and building components. So I'm
-      enjoying creating components for the open source component library{' '}
+      enjoying creating components for the open source component library{" "}
       <a href="https://www.kibo-ui.com/" rel="noreferrer" target="_blank">
         Kibo UI
-      </a>{' '}
-      created by Vercel's engineer{' '}
+      </a>{" "}
+      created by Vercel's engineer{" "}
       <a
         href="https://twitter.com/haydenbleasel"
         rel="noreferrer"
@@ -80,7 +80,7 @@ const SVGOUI = () => (
     <p>
       When building the credit card component for Kibo UI, I had to deal with a
       number of credit card network icon SVGs. So I build a UI for SVGO to
-      optimize them so I can publish them to{' '}
+      optimize them so I can publish them to{" "}
       <a
         href="https://www.npmjs.com/package/react-card-network-icons"
         rel="noreferrer"
@@ -93,11 +93,11 @@ const SVGOUI = () => (
       .
     </p>
     <p>
-      SVGOUI is a UI for SVG optimizer tool{' '}
+      SVGOUI is a UI for SVG optimizer tool{" "}
       <a href="https://github.com/svg/svgo" rel="noreferrer" target="_blank">
         SVGO
       </a>
-      . Comparing to the predecessor{' '}
+      . Comparing to the predecessor{" "}
       <a
         href="https://github.com/interlace-app/svgui"
         rel="noreferrer"
@@ -109,7 +109,7 @@ const SVGOUI = () => (
       friendly UI, and packs a number of quality of life features.
     </p>
     <p>
-      You can try it out{' '}
+      You can try it out{" "}
       <a href="https://svgoui.pages.dev/" rel="noreferrer" target="_blank">
         here
       </a>
@@ -126,7 +126,7 @@ const Spellbook = () => (
       instructions (that is written in natural language).
     </p>
     <p>
-      So I created{' '}
+      So I created{" "}
       <a href="https://spellbook.space" rel="noreferrer" target="_blank">
         Spellbook
       </a>
@@ -151,13 +151,13 @@ const Fprints = () => (
         target="_blank"
       >
         Factorio
-      </a>{' '}
+      </a>{" "}
       is a factory-building game where you design and build your own factories.
       Players can build complex layouts and share via encoded strings -
       blueprints.
     </p>
     <p>
-      I created{' '}
+      I created{" "}
       <a href="https://fprints.xyz" rel="noreferrer" target="_blank">
         Fprints
       </a>
@@ -183,14 +183,14 @@ const FigKiwiToolbox = () => (
       paste component between tools.
     </p>
     <p>
-      And{' '}
+      And{" "}
       <a
         href="https://github.com/interlace-app/fig-kiwi-toolbox"
         rel="noreferrer"
         target="_blank"
       >
         fig-kiwi-toolbox
-      </a>{' '}
+      </a>{" "}
       was born. It reads and decodes the Figma data you have in the clipboard
       into JSON. The toolbox is greatly inspired by Sketch team's Figma file
       importer and have inspired many other developers on Reddit.
@@ -203,7 +203,7 @@ const MirrorActualSize = () => (
     <p>
       <a href="https://www.figma.com/mirror" rel="noreferrer" target="_blank">
         Figma Mirror
-      </a>{' '}
+      </a>{" "}
       is a useful tool for previewing and interacting with designs, but it has a
       major limitation: it always scales the content to fit the screen. This can
       be problematic when designing for IoT devices with different screen sizes,
@@ -251,10 +251,10 @@ const MirrorActualSize = () => (
 const Slides = () => (
   <ProjectCard logo={logo5} status="Archived" title="Slides">
     <p>
-      Many designers{' '}
+      Many designers{" "}
       <a href="https://www.figma.com/mirror" rel="noreferrer" target="_blank">
         create slide decks with Figma
-      </a>{' '}
+      </a>{" "}
       , including myself. However, one limitation of Figma is that it does not
       have built-in controls for advancing or going back through the slides.
       This means that designers have to manually add these interactions, which
@@ -278,7 +278,7 @@ const Slides = () => (
     />
     <p>
       This saves time and ensures that the interactions are always up-to-date,
-      even when slides are re-ordered. It makes Figma the most{' '}
+      even when slides are re-ordered. It makes Figma the most{" "}
       <b>practical presentation solution</b>. In 2024, Figma officially
       announced that the native Figma Slides (and broke Slides...). It has been
       a great ride!
@@ -307,14 +307,14 @@ const AppleSummarySlides = () => (
     </p>
     <p>
       In response to this demand, I created a collection of Bento summary slides
-      that is accessible on{' '}
+      that is accessible on{" "}
       <a
         href="https://apple-summary-slides.vercel.app/"
         rel="noreferrer"
         target="_blank"
       >
         web
-      </a>{' '}
+      </a>{" "}
       and Figma. This collection has allowed over 14K designers and 30K visitors
       to easily access and get inspirations from the slides.
     </p>
@@ -350,10 +350,10 @@ const OcticonsExtended = () => (
       use of octicons by GitHub.
     </p>
     <p>
-      GitHub&apos;s original octicons inspired our{' '}
+      GitHub&apos;s original octicons inspired our{" "}
       <a href="https://old.rickyzhang.me/" rel="noreferrer" target="_blank">
         icon system refresh
-      </a>{' '}
+      </a>{" "}
       at Mosaic, but we found that it has limited coverage because it is
       tailored to GitHub&apos;s specific needs. With octicons-extended, I aim to
       expand the icon selection and empower more users.
@@ -385,8 +385,8 @@ const OcticonsExtended = () => (
 import { ZapIcon } from '@primer/octicons-react';
 // switching to octicons-extended 
 import { ZapIcon } from 'octicons-extended-react';`,
-            language: 'typescript',
-            filename: 'my-component.tsx',
+            language: "typescript",
+            filename: "my-component.tsx",
           },
         ]}
         defaultValue="typescript"
@@ -429,7 +429,7 @@ const Paopao = () => (
     <p>
       I vectorized each single Paopao sticker with vector tools in Figma! It
       enables us to remix for even more funny memes. Users can duplicate the
-      stickers in the Figma Community or{' '}
+      stickers in the Figma Community or{" "}
       <a
         href="https://t.me/addstickers/tieba_paopao/"
         rel="noreferrer"
@@ -449,8 +449,7 @@ const Paopao = () => (
   </ProjectCard>
 );
 
-export const More = () => {
-  return (
+export const More = () => (
     <PageLayout>
       <HeaderCard
         subtitle="I spent most of my free time on side projects that speak for my passion. It's a way to build without constraints from work, and a freedom to explore latest ideas and techs."
@@ -470,4 +469,3 @@ export const More = () => {
       </div>
     </PageLayout>
   );
-};

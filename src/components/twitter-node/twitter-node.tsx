@@ -1,8 +1,8 @@
-import { ArrowUpRightIcon } from '@phosphor-icons/react';
-import type { NodeProps } from '@xyflow/react';
-import { motion } from 'framer-motion';
-import { useAtom } from 'jotai';
-import { atoms } from '../../atoms';
+import { ArrowUpRightIcon } from "@phosphor-icons/react";
+import type { NodeProps } from "@xyflow/react";
+import { motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { atoms } from "../../atoms";
 
 export const TwitterNode = ({ id }: NodeProps) => {
   const [currentDraggingNode] = useAtom(atoms.currentDraggingNode);
@@ -14,15 +14,15 @@ export const TwitterNode = ({ id }: NodeProps) => {
       whileHover={{
         scale: isDragging ? 1.15 : 1,
         boxShadow: isDragging
-          ? '0 10px 20px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05)'
-          : '0 1px 4px 0 rgb(0 0 0 / 0.05)',
+          ? "0 10px 20px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05)"
+          : "0 1px 4px 0 rgb(0 0 0 / 0.05)",
       }}
     >
       <p className="pl-4">Twitter</p>
       <div className="flex items-center gap-1">
         <button
           className="nodrag flex items-center justify-center rounded-full bg-white/20 p-3 text-white transition hover:bg-white/30"
-          onClick={() => window.open('https://x.com/rickyrickyriri', '_blank')}
+          onClick={() => window.open("https://x.com/rickyrickyriri", "_blank")}
           onPointerDownCapture={(e) => e.stopPropagation()}
           type="button"
         >

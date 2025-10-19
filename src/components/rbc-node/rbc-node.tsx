@@ -1,8 +1,7 @@
-import { CompanyNode } from '../company-node/company-node';
-import logo from './rbc-logo.webp';
+import { CompanyNode } from "../company-node/company-node";
+import logo from "./rbc-logo.webp";
 
-export const RBCNode = () => {
-  return (
+export const RBCNode = () => (
     <CompanyNode
       company="RBC"
       id="rbc"
@@ -11,4 +10,3 @@ export const RBCNode = () => {
       time="2023 - 2024"
     />
   );
-};

@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
 
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 /* biome-ignore lint/nursery/noUnknownAtRule: tailwindcss plugin */
 @plugin "@tailwindcss/typography";
@@ -11,7 +11,7 @@
 
 /* biome-ignore lint/nursery/noUnknownAtRule: tailwindcss theme */
 @theme {
-  --font-fredericka: 'Fredericka the Great', Inter, sans-serif;
+  --font-fredericka: "Fredericka the Great", Inter, sans-serif;
 }
 
 /*
@@ -35,9 +35,9 @@
 :root {
   font-family: Inter, sans-serif;
   font-feature-settings:
-    'liga' 1,
-    'calt' 1,
-    'cv11' 1;
+    "liga" 1,
+    "calt" 1,
+    "cv11" 1;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);

@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   type MotionStyle,
@@ -8,9 +8,9 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
-} from 'framer-motion';
-import type React from 'react';
-import { useRef } from 'react';
+} from "framer-motion";
+import type React from "react";
+import { useRef } from "react";
 
 type TiltProps = {
   children: React.ReactNode;
@@ -84,8 +84,8 @@ export function Tilt({
       onMouseMove={handleMouseMove}
       ref={ref}
       style={{
-        transformStyle: 'preserve-3d',
-        overflow: 'visible',
+        transformStyle: "preserve-3d",
+        overflow: "visible",
         ...style,
         transform,
       }}

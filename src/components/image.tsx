@@ -1,4 +1,4 @@
-import { tw } from '../utils/tw';
+import { tw } from "../utils/tw";
 
 type ImageProps = {
   src: string;
@@ -15,8 +15,8 @@ export const Image = ({ src, href, className, autoHeight }: ImageProps) => {
         <img
           alt="missing alt"
           className={tw(
-            'not-prose w-full cursor-pointer rounded-xl border border-gray-200 bg-gray-700 object-contain',
-            autoHeight ? 'h-auto' : 'h-96',
+            "not-prose w-full cursor-pointer rounded-xl border border-gray-200 bg-gray-700 object-contain",
+            autoHeight ? "h-auto" : "h-96",
             className
           )}
           src={src}
@@ -26,13 +26,13 @@ export const Image = ({ src, href, className, autoHeight }: ImageProps) => {
   }
 
   return (
-    <div className={tw('not-prose w-full')}>
+    <div className={tw("not-prose w-full")}>
       {/** biome-ignore lint/performance/noImgElement: just simple img */}
       <img
         alt="missing alt"
         className={tw(
-          'm-auto rounded-xl border border-gray-200 object-contain',
-          autoHeight ? 'h-auto' : 'h-96',
+          "m-auto rounded-xl border border-gray-200 object-contain",
+          autoHeight ? "h-auto" : "h-96",
           className
         )}
         src={src}

@@ -1,6 +1,6 @@
-import { ArrowLeftIcon } from '@phosphor-icons/react';
-import { useAtom } from 'jotai';
-import { atoms } from '../atoms';
+import { ArrowLeftIcon } from "@phosphor-icons/react";
+import { useAtom } from "jotai";
+import { atoms } from "../atoms";
 
 export const BackButton = () => {
   const [, setDisplayContent] = useAtom(atoms.displayContent);

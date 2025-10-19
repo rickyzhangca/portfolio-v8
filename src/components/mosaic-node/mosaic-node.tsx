@@ -1,8 +1,7 @@
-import { CompanyNode } from '../company-node/company-node';
-import logo from './mosaic-logo.webp';
+import { CompanyNode } from "../company-node/company-node";
+import logo from "./mosaic-logo.webp";
 
-export const MosaicNode = () => {
-  return (
+export const MosaicNode = () => (
     <CompanyNode
       company="Mosaic"
       id="mosaic"
@@ -11,4 +10,3 @@ export const MosaicNode = () => {
       time="2020 - 2023"
     />
   );
-};

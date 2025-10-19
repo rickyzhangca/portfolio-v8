@@ -1,19 +1,19 @@
-import type { NodeProps } from '@xyflow/react';
-import { motion } from 'framer-motion';
-import { useAtom } from 'jotai';
-import { useEffect, useRef, useState } from 'react';
-import { atoms } from '../../atoms';
-import logo0 from '../../pages/more/logo-0.webp';
-import logo1 from '../../pages/more/logo-1.webp';
-import logo2 from '../../pages/more/logo-2.webp';
-import logo3 from '../../pages/more/logo-3.webp';
-import logo4 from '../../pages/more/logo-4.webp';
-import logo5 from '../../pages/more/logo-5.webp';
-import logo6 from '../../pages/more/logo-6.webp';
-import logo7 from '../../pages/more/logo-7.webp';
-import logo8 from '../../pages/more/logo-8.webp';
-import logo9 from '../../pages/more/logo-9.webp';
-import { tw } from '../../utils/tw';
+import type { NodeProps } from "@xyflow/react";
+import { motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { useEffect, useRef, useState } from "react";
+import { atoms } from "../../atoms";
+import logo0 from "../../pages/more/logo-0.webp";
+import logo1 from "../../pages/more/logo-1.webp";
+import logo2 from "../../pages/more/logo-2.webp";
+import logo3 from "../../pages/more/logo-3.webp";
+import logo4 from "../../pages/more/logo-4.webp";
+import logo5 from "../../pages/more/logo-5.webp";
+import logo6 from "../../pages/more/logo-6.webp";
+import logo7 from "../../pages/more/logo-7.webp";
+import logo8 from "../../pages/more/logo-8.webp";
+import logo9 from "../../pages/more/logo-9.webp";
+import { tw } from "../../utils/tw";
 
 const projects1: string[] = [logo0, logo1, logo2, logo3, logo4];
 
@@ -29,23 +29,23 @@ export const MoreNode = ({ id }: NodeProps) => {
 
   useEffect(() => {
     const reactFlowNode = nodeRef.current?.closest(
-      '.react-flow__node-MoreNode'
+      ".react-flow__node-MoreNode"
     ) as HTMLElement | null;
 
     if (!reactFlowNode) {
       return;
     }
 
-    reactFlowNode.style.zIndex = isHovered ? '1001' : '0';
+    reactFlowNode.style.zIndex = isHovered ? "1001" : "0";
   }, [isHovered]);
 
   return (
     <motion.div
       className={tw(
-        'relative transition-all',
+        "relative transition-all",
         isHovered
-          ? 'h-80 w-[536px] overflow-hidden rounded-2xl border bg-white shadow-xl'
-          : 'h-40 w-[340px] shadow-none'
+          ? "h-80 w-[536px] overflow-hidden rounded-2xl border bg-white shadow-xl"
+          : "h-40 w-[340px] shadow-none"
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -56,10 +56,10 @@ export const MoreNode = ({ id }: NodeProps) => {
     >
       <button
         className={tw(
-          'absolute inset-x-0 top-0 border-b p-4 text-center font-medium text-gray-900 outline-hidden transition hover:cursor-pointer hover:bg-muted',
-          isHovered ? 'opacity-100' : 'opacity-0'
+          "absolute inset-x-0 top-0 border-b p-4 text-center font-medium text-gray-900 outline-hidden transition hover:cursor-pointer hover:bg-muted",
+          isHovered ? "opacity-100" : "opacity-0"
         )}
-        onClick={() => setDisplayContent('more')}
+        onClick={() => setDisplayContent("more")}
         type="button"
       >
         Fun projects →

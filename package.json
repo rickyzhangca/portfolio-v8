@@ -8,7 +8,11 @@
     "build": "tsc -b && vite build",
     "fix": "ultracite format",
     "preview": "vite preview",
-    "up": "upgrade -L"
+    "up": "upgrade -L",
+    "format": "biome format",
+    "format:write": "biome format --write",
+    "lint": "biome lint",
+    "lint:write": "biome lint --write"
   },
   "dependencies": {
     "@icons-pack/react-simple-icons": "^13.8.0",

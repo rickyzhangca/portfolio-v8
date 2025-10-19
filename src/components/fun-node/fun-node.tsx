@@ -1,18 +1,18 @@
-import type { NodeProps } from '@xyflow/react';
-import { motion } from 'framer-motion';
-import { useAtom } from 'jotai';
-import { atoms } from '../../atoms';
+import type { NodeProps } from "@xyflow/react";
+import { motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { atoms } from "../../atoms";
 
-import { Tooltip, TooltipContent, TooltipTrigger } from '../tooltip';
-import anime from './anime.webp';
-import cat from './cat.webp';
-import cs2 from './cs2.webp';
-import figma from './figma.webp';
-import hackathon from './hackathon.webp';
-import macbook from './macbook.webp';
-import shoe from './shoe.webp';
-import tailwind from './tailwind.webp';
-import turtles from './turtles.webp';
+import { Tooltip, TooltipContent, TooltipTrigger } from "../tooltip";
+import anime from "./anime.webp";
+import cat from "./cat.webp";
+import cs2 from "./cs2.webp";
+import figma from "./figma.webp";
+import hackathon from "./hackathon.webp";
+import macbook from "./macbook.webp";
+import shoe from "./shoe.webp";
+import tailwind from "./tailwind.webp";
+import turtles from "./turtles.webp";
 
 export const FunNode = ({ id }: NodeProps) => {
   const [currentDraggingNode] = useAtom(atoms.currentDraggingNode);
@@ -25,8 +25,8 @@ export const FunNode = ({ id }: NodeProps) => {
         rotate: isDragging ? -4 : 2,
         scale: isDragging ? 1.4 : 1.3,
         filter: isDragging
-          ? 'drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1))'
-          : 'drop-shadow(0 1px 4px rgba(0, 0, 0, 0.05))',
+          ? "drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1))"
+          : "drop-shadow(0 1px 4px rgba(0, 0, 0, 0.05))",
       }}
     >
       {/** biome-ignore lint/performance/noImgElement: just simple img */}

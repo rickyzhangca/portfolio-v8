@@ -1,8 +1,8 @@
-import type { NodeProps } from '@xyflow/react';
-import { motion } from 'framer-motion';
-import { useAtom } from 'jotai';
-import { atoms } from '../../atoms';
-import pen from './pen.webp';
+import type { NodeProps } from "@xyflow/react";
+import { motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { atoms } from "../../atoms";
+import pen from "./pen.webp";
 
 export const NoteNode = ({ id }: NodeProps) => {
   const [currentDraggingNode] = useAtom(atoms.currentDraggingNode);
@@ -17,8 +17,8 @@ export const NoteNode = ({ id }: NodeProps) => {
         rotate: isDragging ? -8 : 4,
         scale: isDragging ? 1.15 : 1,
         boxShadow: isDragging
-          ? '0 10px 20px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05)'
-          : '0 1px 4px 0 rgb(0 0 0 / 0.05)',
+          ? "0 10px 20px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05)"
+          : "0 1px 4px 0 rgb(0 0 0 / 0.05)",
       }}
     >
       <div className="flex h-72 w-64 flex-col justify-between gap-8 rounded-md bg-[#FEF296] p-5 shadow-md">
@@ -33,7 +33,7 @@ export const NoteNode = ({ id }: NodeProps) => {
         </div>
         <button
           className="w-fit text-gray-800 text-sm underline outline-hidden hover:cursor-pointer"
-          onClick={() => setDisplayContent('why')}
+          onClick={() => setDisplayContent("why")}
           type="button"
         >
           About me →

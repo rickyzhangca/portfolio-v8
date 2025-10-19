@@ -1,8 +1,7 @@
-import { CompanyNode } from '../company-node/company-node';
-import logo from './ws-logo.webp';
+import { CompanyNode } from "../company-node/company-node";
+import logo from "./ws-logo.webp";
 
-export const WSNode = () => {
-  return (
+export const WSNode = () => (
     <CompanyNode
       company="Wealthsimple"
       id="wealthsimple"
@@ -11,4 +10,3 @@ export const WSNode = () => {
       time="2024 - Present"
     />
   );
-};

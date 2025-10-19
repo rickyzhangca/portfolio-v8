@@ -1,15 +1,14 @@
-import { HeaderCard } from '../../components/header-card';
-import { HighlightCard } from '../../components/highlight-card';
-import { PageLayout } from '../../components/page-layout';
-import b2b from './b2b.webp';
-import ds from './ds.webp';
-import graphic from './graphic.webp';
-import icon from './icon.webp';
-import packaging from './packaging.webp';
-import printers from './printers.webp';
+import { HeaderCard } from "../../components/header-card";
+import { HighlightCard } from "../../components/highlight-card";
+import { PageLayout } from "../../components/page-layout";
+import b2b from "./b2b.webp";
+import ds from "./ds.webp";
+import graphic from "./graphic.webp";
+import icon from "./icon.webp";
+import packaging from "./packaging.webp";
+import printers from "./printers.webp";
 
-export const Mosaic = () => {
-  return (
+export const Mosaic = () => (
     <PageLayout>
       <HeaderCard
         subtitle="I worked at Mosaic as a UI/UX designer but I designed way more than just UI and UX. It was a great journey because I had trusts and supports from my team to let my passion shine through many areas."
@@ -37,4 +36,3 @@ export const Mosaic = () => {
       </div>
     </PageLayout>
   );
-};

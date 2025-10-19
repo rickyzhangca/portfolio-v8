@@ -10,31 +10,31 @@ import {
   useReactFlow,
   useViewport,
   type Viewport,
-} from '@xyflow/react';
-import { Portal } from 'radix-ui';
-import '@xyflow/react/dist/base.css';
+} from "@xyflow/react";
+import { Portal } from "radix-ui";
+import "@xyflow/react/dist/base.css";
 
-import { ArrowUUpLeftIcon } from '@phosphor-icons/react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useAtom } from 'jotai';
-import { parseAsString, useQueryState } from 'nuqs';
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { useWindowSize } from 'usehooks-ts';
-import { atoms } from './atoms';
-import { EmailNode } from './components/email-node/email-node';
-import { FunNode } from './components/fun-node/fun-node';
-import { LinkedInNode } from './components/linkedin-node/linkedin-node';
-import { MemojiNode } from './components/memoji-node/memoji-node';
-import { MintlifyNode } from './components/mintlify-node/mintlify-node';
-import { MoreNode } from './components/more-node/more-node';
-import { MosaicNode } from './components/mosaic-node/mosaic-node';
-import { NoteNode } from './components/note-node/note-node';
-import { RBCNode } from './components/rbc-node/rbc-node';
-import { ResumeNode } from './components/resume-node/resume-node';
-import { SwagNode } from './components/swag-node/swag-node';
-import { TwitterNode } from './components/twitter-node/twitter-node';
-import { WSNode } from './components/ws-node/ws-node';
-import { Contents } from './pages';
+import { ArrowUUpLeftIcon } from "@phosphor-icons/react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { parseAsString, useQueryState } from "nuqs";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useWindowSize } from "usehooks-ts";
+import { atoms } from "./atoms";
+import { EmailNode } from "./components/email-node/email-node";
+import { FunNode } from "./components/fun-node/fun-node";
+import { LinkedInNode } from "./components/linkedin-node/linkedin-node";
+import { MemojiNode } from "./components/memoji-node/memoji-node";
+import { MintlifyNode } from "./components/mintlify-node/mintlify-node";
+import { MoreNode } from "./components/more-node/more-node";
+import { MosaicNode } from "./components/mosaic-node/mosaic-node";
+import { NoteNode } from "./components/note-node/note-node";
+import { RBCNode } from "./components/rbc-node/rbc-node";
+import { ResumeNode } from "./components/resume-node/resume-node";
+import { SwagNode } from "./components/swag-node/swag-node";
+import { TwitterNode } from "./components/twitter-node/twitter-node";
+import { WSNode } from "./components/ws-node/ws-node";
+import { Contents } from "./pages";
 
 const nodeTypes = {
   MemojiNode,
@@ -55,7 +55,7 @@ const nodeTypes = {
 const defaultViewport: Viewport = { x: 0, y: 0, zoom: 0.9 };
 
 export const Flow = () => {
-  const [page, setPage] = useQueryState('page', parseAsString);
+  const [page, setPage] = useQueryState("page", parseAsString);
   const [displayContent, setDisplayContent] = useAtom(atoms.displayContent);
 
   const isSyncingRef = useRef(false);
@@ -107,20 +107,20 @@ export const Flow = () => {
   const resetNodes = useCallback(() => {
     setNodes([
       {
-        id: 'MemojiNode',
-        type: 'MemojiNode',
+        id: "MemojiNode",
+        type: "MemojiNode",
         position: screenToFlowPosition({ x: 24, y: 24 }),
         data: { value: 123 },
       },
       {
-        id: 'EmailNode',
-        type: 'EmailNode',
+        id: "EmailNode",
+        type: "EmailNode",
         position: { x: 105, y: 105 },
         data: { value: 123 },
       },
       {
-        id: 'NoteNode',
-        type: 'NoteNode',
+        id: "NoteNode",
+        type: "NoteNode",
         position: screenToFlowPosition({
           x: 100,
           y: 300,
@@ -128,8 +128,8 @@ export const Flow = () => {
         data: { value: 123 },
       },
       {
-        id: 'ResumeNode',
-        type: 'ResumeNode',
+        id: "ResumeNode",
+        type: "ResumeNode",
         position: screenToFlowPosition({
           x: 450,
           y: 620,
@@ -137,8 +137,8 @@ export const Flow = () => {
         data: { value: 123 },
       },
       {
-        id: 'MosaicNode',
-        type: 'MosaicNode',
+        id: "MosaicNode",
+        type: "MosaicNode",
         position: screenToFlowPosition({
           x: 460 + 220 * 3,
           y: 140 + 80 * 3,
@@ -146,8 +146,8 @@ export const Flow = () => {
         data: { value: 123 },
       },
       {
-        id: 'RBCNode',
-        type: 'RBCNode',
+        id: "RBCNode",
+        type: "RBCNode",
         position: screenToFlowPosition({
           x: 460 + 220 * 2,
           y: 140 + 80 * 2,
@@ -155,8 +155,8 @@ export const Flow = () => {
         data: { value: 123 },
       },
       {
-        id: 'MintlifyNode',
-        type: 'MintlifyNode',
+        id: "MintlifyNode",
+        type: "MintlifyNode",
         position: screenToFlowPosition({
           x: 460 + 220,
           y: 140 + 80,
@@ -164,8 +164,8 @@ export const Flow = () => {
         data: { value: 123 },
       },
       {
-        id: 'WSNode',
-        type: 'WSNode',
+        id: "WSNode",
+        type: "WSNode",
         position: screenToFlowPosition({
           x: 460,
           y: 140,
@@ -173,8 +173,8 @@ export const Flow = () => {
         data: { value: 123 },
       },
       {
-        id: 'TwitterNode',
-        type: 'TwitterNode',
+        id: "TwitterNode",
+        type: "TwitterNode",
         position: screenToFlowPosition({
           x: windowSize.width - 160,
           y: 30,
@@ -182,8 +182,8 @@ export const Flow = () => {
         data: { value: 123 },
       },
       {
-        id: 'LinkedInNode',
-        type: 'LinkedInNode',
+        id: "LinkedInNode",
+        type: "LinkedInNode",
         position: screenToFlowPosition({
           x: windowSize.width - 300,
           y: 50,
@@ -191,8 +191,8 @@ export const Flow = () => {
         data: { value: 123 },
       },
       {
-        id: 'MoreNode',
-        type: 'MoreNode',
+        id: "MoreNode",
+        type: "MoreNode",
         position: screenToFlowPosition({
           x: 1300,
           y: 160,
@@ -200,8 +200,8 @@ export const Flow = () => {
         data: { value: 123 },
       },
       {
-        id: 'FunNode',
-        type: 'FunNode',
+        id: "FunNode",
+        type: "FunNode",
         position: screenToFlowPosition({
           x: 1460,
           y: 540,
@@ -209,8 +209,8 @@ export const Flow = () => {
         data: { value: 123 },
       },
       {
-        id: 'SwagNode',
-        type: 'SwagNode',
+        id: "SwagNode",
+        type: "SwagNode",
         position: screenToFlowPosition({
           x: 1460,
           y: 360,
@@ -233,7 +233,7 @@ export const Flow = () => {
   }, [nodes.length, resetNodes]);
 
   return (
-    <div style={{ width: '100vw', height: '100vh' }}>
+    <div style={{ width: "100vw", height: "100vh" }}>
       <ReactFlow
         defaultViewport={defaultViewport}
         edges={edges}
@@ -241,7 +241,7 @@ export const Flow = () => {
         nodeTypes={nodeTypes}
         onConnect={onConnect}
         onNodeDragStart={(_, node) => setCurrentDraggingNode(node.id)}
-        onNodeDragStop={() => setCurrentDraggingNode('')}
+        onNodeDragStop={() => setCurrentDraggingNode("")}
         onNodesChange={onNodesChange}
         panOnScroll
         proOptions={{ hideAttribution: true }}
@@ -281,7 +281,7 @@ export const Flow = () => {
               initial={{ opacity: 0 }}
               transition={{
                 duration: 0.2,
-                ease: 'easeInOut',
+                ease: "easeInOut",
               }}
             />
           </Portal.Root>

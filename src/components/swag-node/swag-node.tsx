@@ -1,9 +1,9 @@
-import { useAtom } from 'jotai';
-import { atoms } from '../../atoms';
-import swag17 from '../../pages/swag/17.webp';
-import swag22 from '../../pages/swag/22.webp';
-import swag33 from '../../pages/swag/33.webp';
-import swag86 from '../../pages/swag/86.webp';
+import { useAtom } from "jotai";
+import { atoms } from "../../atoms";
+import swag17 from "../../pages/swag/17.webp";
+import swag22 from "../../pages/swag/22.webp";
+import swag33 from "../../pages/swag/33.webp";
+import swag86 from "../../pages/swag/86.webp";
 
 export const SwagNode = () => {
   const [, setDisplayContent] = useAtom(atoms.displayContent);
@@ -36,7 +36,7 @@ export const SwagNode = () => {
       />
       <button
         className="-translate-x-1/2 -translate-y-1/2 absolute top-1/2 left-1/2 w-56 cursor-pointer rounded-2xl bg-white px-4 py-3 font-medium opacity-0 shadow transition hover:shadow-lg active:bg-muted group-hover:opacity-100"
-        onClick={() => setDisplayContent('swag')}
+        onClick={() => setDisplayContent("swag")}
         type="button"
       >
         View my swag collection

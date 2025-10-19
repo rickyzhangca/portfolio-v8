@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { useAtom } from 'jotai';
-import { atoms } from '../../atoms';
-import type { Contents } from '../../pages';
-import { OpenCardLinkButton } from '../open-card-link-button';
+import { motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { atoms } from "../../atoms";
+import type { Contents } from "../../pages";
+import { OpenCardLinkButton } from "../open-card-link-button";
 
 type CompanyNodeProps = {
   id: keyof typeof Contents;
@@ -29,8 +29,8 @@ export const CompanyNode = ({
         rotate: isDragging ? -8 : 4,
         scale: isDragging ? 1.05 : 1,
         boxShadow: isDragging
-          ? '0 10px 20px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05)'
-          : '0 1px 4px 0 rgb(0 0 0 / 0.05)',
+          ? "0 10px 20px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.05)"
+          : "0 1px 4px 0 rgb(0 0 0 / 0.05)",
       }}
     >
       <div className="relative flex flex-col gap-2.5 rounded-md border border-gray-200 bg-white p-2 pb-2.5 shadow-sm">

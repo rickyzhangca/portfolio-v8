@@ -1,5 +1,5 @@
-import { ArrowUpRightIcon } from '@phosphor-icons/react';
-import figma from './figma.svg';
+import { ArrowUpRightIcon } from "@phosphor-icons/react";
+import figma from "./figma.svg";
 
 type FigmaCardProps = {
   title: string;
@@ -40,7 +40,7 @@ export const FigmaCard = ({
         >
           {/** biome-ignore lint/performance/noImgElement: just simple img */}
           <img alt="figma logo" src={figma} />
-          {label ?? 'View Plugin'}
+          {label ?? "View Plugin"}
         </a>
       </div>
     </div>

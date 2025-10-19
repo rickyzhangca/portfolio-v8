@@ -1,9 +1,9 @@
-import type { NodeProps } from '@xyflow/react';
-import { AnimatePresence, motion } from 'framer-motion';
-import { useAtom } from 'jotai';
-import { useState } from 'react';
-import { atoms } from '../../atoms';
-import resume from './resume.webp';
+import type { NodeProps } from "@xyflow/react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useAtom } from "jotai";
+import { useState } from "react";
+import { atoms } from "../../atoms";
+import resume from "./resume.webp";
 
 const FolderBottom = () => (
   <svg
@@ -38,8 +38,8 @@ const FolderBottom = () => (
 const FolderTop = ({ isHovering }: { isHovering: boolean }) => (
   <motion.svg
     animate={{
-      rotateX: isHovering ? '-30deg' : '0deg',
-      filter: isHovering ? 'drop-shadow(0px -4px 8px rgb(0 0 0 / 0.05))' : '',
+      rotateX: isHovering ? "-30deg" : "0deg",
+      filter: isHovering ? "drop-shadow(0px -4px 8px rgb(0 0 0 / 0.05))" : "",
     }}
     className="absolute bottom-0 z-20 h-auto w-full origin-bottom cursor-pointer"
     fill="none"
@@ -139,8 +139,8 @@ export const ResumeNode = ({ id }: NodeProps) => {
       whileHover={{
         scale: isDragging ? 1.15 : 1,
         filter: isDragging
-          ? 'drop-shadow(0px 4px 8px rgb(0 0 0 /0.08))'
-          : 'drop-shadow(0px 4px 8px rgb(0 0 0 / 0.03))',
+          ? "drop-shadow(0px 4px 8px rgb(0 0 0 /0.08))"
+          : "drop-shadow(0px 4px 8px rgb(0 0 0 / 0.03))",
       }}
     >
       <FolderBottom />
@@ -148,17 +148,17 @@ export const ResumeNode = ({ id }: NodeProps) => {
         {/** biome-ignore lint/performance/noImgElement: just simple img */}
         <motion.img
           animate={{
-            translateY: isHovering ? '-50px' : '0px',
-            filter: 'drop-shadow(0px 0px 4px rgb(0 0 0 / 0.05))',
+            translateY: isHovering ? "-50px" : "0px",
+            filter: "drop-shadow(0px 0px 4px rgb(0 0 0 / 0.05))",
           }}
           className="absolute bottom-0 left-1/2 z-10 h-auto w-[calc(100%-24px)] cursor-pointer"
           initial={{
-            translateX: '-50%',
+            translateX: "-50%",
           }}
           onClick={() =>
             window.open(
-              'https://drive.google.com/file/d/1M4WVGROUJAAZc6Q01KqiiKwoQqXayh8B/view?usp=sharing',
-              '_blank'
+              "https://drive.google.com/file/d/1M4WVGROUJAAZc6Q01KqiiKwoQqXayh8B/view?usp=sharing",
+              "_blank"
             )
           }
           src={resume}

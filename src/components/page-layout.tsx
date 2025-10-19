@@ -1,8 +1,7 @@
-import { motion } from 'framer-motion';
-import { BackButton } from './back-button';
+import { motion } from "framer-motion";
+import { BackButton } from "./back-button";
 
-export const PageLayout = ({ children }: { children: React.ReactNode }) => {
-  return (
+export const PageLayout = ({ children }: { children: React.ReactNode }) => (
     <motion.div
       animate={{ opacity: 1 }}
       className="fixed inset-0 z-20 overflow-auto p-3 md:p-6 lg:p-8"
@@ -10,7 +9,7 @@ export const PageLayout = ({ children }: { children: React.ReactNode }) => {
       initial={{ opacity: 0 }}
       transition={{
         duration: 0.2,
-        ease: 'easeInOut',
+        ease: "easeInOut",
       }}
     >
       <motion.div
@@ -21,7 +20,7 @@ export const PageLayout = ({ children }: { children: React.ReactNode }) => {
         onClick={(e) => e.stopPropagation()}
         transition={{
           duration: 0.3,
-          type: 'spring',
+          type: "spring",
           bounce: 0.4,
         }}
       >
@@ -31,4 +30,3 @@ export const PageLayout = ({ children }: { children: React.ReactNode }) => {
       </motion.div>
     </motion.div>
   );
-};
