@@ -29,19 +29,7 @@ export const Why = () => {
         </h2>
       </div>
       <div className="prose w-full max-w-full rounded-2xl bg-white p-3 text-start md:p-8">
-        <h2>Design engineer blog</h2>
-        <p>
-          I write about my experiences as a design engineer, sharing insights
-          and lessons learned along the way.
-        </p>
-        <a
-          className="flex w-full items-center justify-center rounded-xl border border-gray-200 px-2 py-6 text-center hover:bg-gray-50"
-          href="https://blog.rickyzhang.me"
-          rel="noreferrer"
-          target="_blank"
-        >
-          blog.rickyzhang.me
-        </a>
+        <h2>What got me here?</h2>
         <p>
           The seed of blending design and engineering was planted in the school
           when I read about{' '}
@@ -62,11 +50,24 @@ export const Why = () => {
         </p>
         <p>
           This experience ignited my curiosity about the technical aspects,
-          leading me to become a UX engineer at RBC AIOps team, and eventually,
-          a design engineer at Mintlify, then Wealthsimple - my dream company
-          making my favorite product. The design system team enabled me to fully
-          leverage my multi-disciplinary skills.
+          leading me to become a UX engineer at RBC AIOps team, a design
+          engineer at Mintlify, and then Wealthsimple - my dream company making
+          my favorite product. The design system team enabled me to fully
+          leverage my multi-disciplinary skills. It also pushed me further with
+          now React Native added to my stack.
         </p>
+        <p>
+          I write about my experiences as a design engineer, sharing insights
+          and lessons learned along the way.
+        </p>
+        <a
+          className="flex w-full items-center justify-center rounded-xl border border-gray-200 px-2 py-6 text-center hover:bg-gray-50"
+          href="https://blog.rickyzhang.me"
+          rel="noreferrer"
+          target="_blank"
+        >
+          blog.rickyzhang.me
+        </a>
       </div>
       <div className="prose w-full max-w-full rounded-2xl bg-white p-3 text-start md:p-8">
         <h2>What Drives Me</h2>
