@@ -37,7 +37,7 @@ export const FunNode = ({ id }: NodeProps) => {
           <img alt="shoe" src={shoe} />
         </TooltipTrigger>
         <TooltipContent sideOffset={2}>
-          I'm a runner! I have run 4 marathons in 2023 and 2 in 2024 🎽
+          I'm a runner! I have run 7 marathons across Canada 🎽
         </TooltipContent>
       </Tooltip>
       <Tooltip>
