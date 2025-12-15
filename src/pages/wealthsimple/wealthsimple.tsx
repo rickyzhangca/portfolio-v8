@@ -8,6 +8,8 @@ import snackbar from "./snackbar.webp";
 import swipeable from "./swipeable.webp";
 import webChart from "./web-chart.webp";
 import dataViz from "./data-viz.webp";
+import nativeSheet from "./native-sheet.webp";
+import wsSans from "./ws-sans.webp";
 import widget from "./widget.webp";
 import ticker from "./ticker.webp";
 
@@ -18,8 +20,10 @@ export const Wealthsimple = () => (
       title="Wealthsimple, Design System"
     />
     <div className="grid gap-2 md:grid-cols-2">
-    <HighlightCard image={ticker} title="Web rolling ticker" />
-    <HighlightCard image={dataViz} title="Data viz colors" />
+      <HighlightCard image={wsSans} title="Wealthsimple Sans rollout" />
+      <HighlightCard image={nativeSheet} title="Native sheets" />
+      <HighlightCard image={ticker} title="Web rolling ticker" />
+      <HighlightCard image={dataViz} title="Data viz colors" />
       <HighlightCard image={widget} title="Redesigned securities widget" />
       <HighlightCard image={webChart} title="Web chart segments + animations" />
       <HighlightCard image={homeGradients} title="Home gradients" />
